@@ -1,0 +1,2 @@
+System: Windows 11
+Platforma: .NET 6.0
