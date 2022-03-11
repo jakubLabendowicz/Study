@@ -1,0 +1,430 @@
+Dlaczego tak siê sta³o? Co nale¿y zrobiæ, ¿eby trasa zosta³a dodana?
+- Poniewa¿, interfejs nie by³ o koñca skonfigurowany, zakñczyliœmy konfiguracjê komend¹ no shutdown
+
+Wpisz komendê, która pozwala zweryfikowaæ, czy nowa trasa zosta³a dodana do tablicy
+routingu. Wynik komendy powinien by podobny do przyk³adu przedstawionego poni¿ej. W
+tablicy routera R1 powinna znajdowa siê teraz odpowiednia trasa. Jaka komenda zosta³a
+u¿yta?R1#
+- 
+
+Dlaczego trasa jest ci¹gle w stanie False? Co musisz zrobiæ, aby upewniæ sie, ¿e interfejs
+zosta³ ca³kowicie skonfigurowany?
+
+
+
+
+
+
+System Bootstrap, Version 15.0(1r)M15, RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 2011 by cisco Systems, Inc.
+
+Total memory size = 512 MB - On-board = 512 MB, DIMM0 = 0 MB
+CISCO2911/K9 platform with 524288 Kbytes of main memory
+Main memory is configured to 72/-1(On-board/DIMM0) bit mode with ECC enabled
+
+
+Readonly ROMMON initialized
+program load complete, entry point: 0x80803000, size: 0x1b340
+program load complete, entry point: 0x80803000, size: 0x1b340
+
+
+IOS Image Load Test
+___________________
+Digitally Signed Release Software
+program load complete, entry point: 0x81000000, size: 0x470d00c
+Self decompressing the image : #################################################                                                                                                                     ################################################################################                                                                                                                     ################################################################################                                                                                                                     ################################################################################                                                                                                                     ################################################################################                                                                                                                     ############################################################################## [                                                                                                                     OK]
+
+Smart Init is enabled
+smart init is sizing iomem
+                 TYPE      MEMORY_REQ
+          HWIC Slot 0      0x00200000
+    Onboard devices &
+         buffer pools      0x0228F000
+-----------------------------------------------
+               TOTAL:      0x0248F000
+
+Rounded IOMEM up to: 40Mb.
+Using 7 percent iomem. [40Mb/512Mb]
+
+              Restricted Rights Legend
+
+Use, duplication, or disclosure by the Government is
+subject to restrictions as set forth in subparagraph
+(c) of the Commercial Computer Software - Restricted
+Rights clause at FAR sec. 52.227-19 and subparagraph
+(c) (1) (ii) of the Rights in Technical Data and Computer
+Software clause at DFARS sec. 252.227-7013.
+
+           cisco Systems, Inc.
+           170 West Tasman Drive
+           San Jose, California 95134-1706
+
+
+
+Cisco IOS Software, C2900 Software (C2900-UNIVERSALK9-M), Version 15.1(4)M4, REL                                                                                                                     EASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2012 by Cisco Systems, Inc.
+Compiled Tue 20-Mar-12 18:57 by prod_rel_team
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+Cisco CISCO2911/K9 (revision 1.0) with 483328K/40960K bytes of memory.
+Processor board ID FGL163811VX
+3 Gigabit Ethernet interfaces
+2 Serial(sync/async) interfaces
+1 terminal line
+DRAM configuration is 64 bits wide with parity enabled.
+255K bytes of non-volatile configuration memory.
+250880K bytes of ATA System CompactFlash 0 (Read/Write)
+
+
+         --- System Configuration Dialog ---
+
+Would you like to enter the initial configuration dialog? [yes/no]: no
+
+
+Press RETURN to get started!
+
+
+Jan  2 12:00:04.151: %IOS_LICENSE_IMAGE_APPLICATION-6-LICENSE_LEVEL: Module name                                                                                                                      = c2900 Next reboot level = ipbasek9 and License = ipbasek9
+Oct 21 09:47:04.615: %IFMGR-7-NO_IFINDEX_FILE: Unable to open nvram:/ifIndex-tab                                                                                                                     le No such file or directory
+Oct 21 09:47:19.203: %LINK-3-UPDOWN: Interface GigabitEthernet0/0, changed state                                                                                                                      to up
+Oct 21 09:47:19.203: %LINK-3-UPDOWN: Interface GigabitEthernet0/1, changed state                                                                                                                      to down
+Oct 21 09:47:19.203: %LINK-3-UPDOWN: Interface GigabitEthernet0/2, changed state                                                                                                                      to down
+Oct 21 09:47:19.203: %LINK-3-UPDOWN: Interface Serial0/0/0, changed state to up
+Oct 21 09:47:19.203: %LINK-3-UPDOWN: Interface Serial0/0/1, changed state to dow                                                                                                                     n
+Oct 21 09:47:20.383: %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthe                                                                                                                     rnet0/0, changed state to up
+Oct 21 09:47:20.383: %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthe                                                                                                                     rnet0/1, changed state to down
+Oct 21 09:47:20.383: %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthe                                                                                                                     rnet0/2, changed state to down
+Oct 21 09:47:20.383: %LINEPROTO-5-UPDOWN: Line protocol on Interface Serial0/0/0                                                                                                                     , changed state to up
+Oct 21 09:47:20.383: %LINEPROTO-5-UPDOWN: Line protocol on Interface Serial0/0/1                                                                                                                     , changed state to down
+Oct 21 09:47:21.183: %SYS-6-STARTUP_CONFIG_IGNORED: System startup configuration                                                                                                                      is ignored based on the configuration register setting.
+Oct 21 09:47:30.283: %LINK-5-CHANGED: Interface Embedded-Service-Engine0/0, chan                                                                                                                     ged state to administratively down
+Oct 21 09:47:30.283: %LINK-5-CHANGED: Interface GigabitEthernet0/0, changed stat                                                                                                                     e to administratively down
+Oct 21 09:47:30.283: %LINK-5-CHANGED: Interface GigabitEthernet0/1, changed stat                                                                                                                     e to administratively down
+Oct 21 09:47:30.283: %LINK-5-CHANGED: Interface GigabitEthernet0/2, changed stat                                                                                                                     e to administratively down
+Oct 21 09:47:30.283: %LINK-5-CHANGED: Interface Serial0/0/0, changed state to ad                                                                                                                     ministratively down
+Oct 21 09:47:30.283: %LINK-5-CHANGED: Interface Serial0/0/1, changed state to ad                                                                                                                     ministratively down
+Oct 21 09:47:31.291: %LINEPROTO-5-UPDOWN: Line protocol on Interface Embedded-Se                                                                                                                     rvice-Engine0/0, changed state to down
+Oct 21 09:47:31.291: %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthe                                                                                                                     rnet0/0, changed state to down
+Oct 21 09:47:31.291: %LINEPROTO-5-UPDOWN: Line protocol on Interface Serial0/0/0                                                                                                                     , changed state to down
+Oct 21 09:47:31.803: %SYS-5-RESTART: System restarted --
+Cisco IOS Software, C2900 Software (C2900-UNIVERSALK9-M), Version 15.1(4)M4, REL                                                                                                                     EASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2012 by Cisco Systems, Inc.
+Compiled Tue 20-Mar-12 18:57 by prod_rel_team
+Oct 21 09:47:31.975: %SNMP-5-COLDSTART: SNMP agent on host Router is undergoing                                                                                                                      a cold start
+Oct 21 09:47:32.591: %SYS-6-BOOTTIME: Time taken to reboot after reload = 3981 s                                                                                                                     econds
+Router>interface serial 0/0
+       ^
+% Invalid input detected at '^' marker.
+
+Router>enable
+Router#interface serial 0/0
+        ^
+% Invalid input detected at '^' marker.
+
+Router#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#interface serial 0/0
+                         ^
+% Invalid input detected at '^' marker.
+
+Router(config)# interface serial 0/0
+                          ^
+% Invalid input detected at '^' marker.
+
+Router(config)#interface serial 0/0
+                         ^
+% Invalid input detected at '^' marker.
+
+Router(config)#interface Serial 0/0
+                         ^
+% Invalid input detected at '^' marker.
+
+Router(config)#interface Serial 0/0/0
+Router(config-if)#ip address 172.16.2.1 255.255.255.0
+Router(config-if)#no shutdown
+Router(config-if)#
+Oct 21 09:58:25.483: %LINK-3-UPDOWN: Interface Serial0/0/0, changed state to up
+Oct 21 09:58:26.483: %LINEPROTO-5-UPDOWN: Line protocol on Interface Serial0/0/0                                                                                                                     , changed state to up
+Router(config-if)#clock rate 64000
+Router(config-if)#no shutdown
+Router(config-if)#erase startup-config
+                   ^
+% Invalid input detected at '^' marker.
+
+Router(config-if)#exit
+Router(config)#erase startup-config
+                 ^
+% Invalid input detected at '^' marker.
+
+Router(config)#exit
+Router#interface serial 0/0
+Oct 21 10:09:10.451: %SYS-5-CONFIG_I: Configured fro
+Router#erase startup-config
+Erasing the nvram filesystem will remove all configuration files! Continue? [con                                                                                                                     firm]
+[OK]
+Erase of nvram: complete
+Router#
+Oct 21 10:09:45.883: %SYS-7-NV_BLOCK_INIT: Initialized the geometry of nvram
+Router#reload
+
+System configuration has been modified. Save? [yes/no]: n
+Proceed with reload? [confirm]
+
+Oct 21 10:10:34.883: %SYS-5-RELOAD: Reload requested by console. Reload Reason:                                                                                                                      Reload Command.
+System Bootstrap, Version 15.0(1r)M15, RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 2011 by cisco Systems, Inc.
+
+Total memory size = 512 MB - On-board = 512 MB, DIMM0 = 0 MB
+CISCO2911/K9 platform with 524288 Kbytes of main memory
+Main memory is configured to 72/-1(On-board/DIMM0) bit mode with ECC enabled
+
+
+Readonly ROMMON initialized
+program load complete, entry point: 0x80803000, size: 0x1b340
+program load complete, entry point: 0x80803000, size: 0x1b340
+
+
+IOS Image Load Test
+___________________
+Digitally Signed Release Software
+program load complete, entry point: 0x81000000, size: 0x470d00c
+Self decompressing the image : #################################################                                                                                                                     ################################################################################                                                                                                                     ################################################################################                                                                                                                     ################################################################################                                                                                                                     ################################################################################                                                                                                                     ############################################################################## [                                                                                                                     OK]
+
+Smart Init is enabled
+smart init is sizing iomem
+                 TYPE      MEMORY_REQ
+          HWIC Slot 0      0x00200000
+    Onboard devices &
+         buffer pools      0x0228F000
+-----------------------------------------------
+               TOTAL:      0x0248F000
+
+Rounded IOMEM up to: 40Mb.
+Using 7 percent iomem. [40Mb/512Mb]
+
+              Restricted Rights Legend
+
+Use, duplication, or disclosure by the Government is
+subject to restrictions as set forth in subparagraph
+(c) of the Commercial Computer Software - Restricted
+Rights clause at FAR sec. 52.227-19 and subparagraph
+(c) (1) (ii) of the Rights in Technical Data and Computer
+Software clause at DFARS sec. 252.227-7013.
+
+           cisco Systems, Inc.
+           170 West Tasman Drive
+           San Jose, California 95134-1706
+
+
+
+Cisco IOS Software, C2900 Software (C2900-UNIVERSALK9-M), Version 15.1(4)M4, REL                                                                                                                     EASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2012 by Cisco Systems, Inc.
+Compiled Tue 20-Mar-12 18:57 by prod_rel_team
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+Cisco CISCO2911/K9 (revision 1.0) with 483328K/40960K bytes of memory.
+Processor board ID FGL163811VX
+3 Gigabit Ethernet interfaces
+2 Serial(sync/async) interfaces
+1 terminal line
+DRAM configuration is 64 bits wide with parity enabled.
+255K bytes of non-volatile configuration memory.
+250880K bytes of ATA System CompactFlash 0 (Read/Write)
+
+
+         --- System Configuration Dialog ---
+
+Would you like to enter the initial configuration dialog? [yes/no]:
+% Please answer 'yes' or 'no'.
+Would you like to enter the initial configuration dialog? [yes/no]: n
+
+
+Press RETURN to get started!
+
+
+Jan  2 12:00:04.139: %IOS_LICENSE_IMAGE_APPLICATION-6-LICENSE_LEVEL: Module name                                                                                                                      = c2900 Next reboot level = ipbasek9 and License = ipbasek9
+Oct 21 10:12:19.619: %IFMGR-7-NO_IFINDEX_FILE: Unable to open nvram:/ifIndex-tab                                                                                                                     le No such file or directory
+Oct 21 10:12:34.207: %LINK-3-UPDOWN: Interface GigabitEthernet0/0, changed state                                                                                                                      to up
+Oct 21 10:12:34.207: %LINK-3-UPDOWN: Interface GigabitEthernet0/1, changed state                                                                                                                      to down
+Oct 21 10:12:34.207: %LINK-3-UPDOWN: Interface GigabitEthernet0/2, changed state                                                                                                                      to down
+Oct 21 10:12:34.207: %LINK-3-UPDOWN: Interface Serial0/0/0, changed state to up
+Oct 21 10:12:34.207: %LINK-3-UPDOWN: Interface Serial0/0/1, changed state to dow                                                                                                                     n
+Oct 21 10:12:35.383: %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthe                                                                                                                     rnet0/0, changed state to up
+Oct 21 10:12:35.383: %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthe                                                                                                                     rnet0/1, changed state to down
+Oct 21 10:12:35.383: %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthe                                                                                                                     rnet0/2, changed state to down
+Oct 21 10:12:35.383: %LINEPROTO-5-UPDOWN: Line protocol on Interface Serial0/0/0                                                                                                                     , changed state to up
+Oct 21 10:12:35.383: %LINEPROTO-5-UPDOWN: Line protocol on Interface Serial0/0/1                                                                                                                     , changed state to down
+Oct 21 10:12:36.183: %SYS-6-STARTUP_CONFIG_IGNORED: System startup configuration                                                                                                                      is ignored based on the configuration register setting.
+Oct 21 10:12:56.291: %LINK-5-CHANGED: Interface Embedded-Service-Engine0/0, chan                                                                                                                     ged state to administratively down
+Oct 21 10:12:56.291: %LINK-5-CHANGED: Interface GigabitEthernet0/0, changed stat                                                                                                                     e to administratively down
+Oct 21 10:12:56.291: %LINK-5-CHANGED: Interface GigabitEthernet0/1, changed stat                                                                                                                     e to administratively down
+Oct 21 10:12:56.291: %LINK-5-CHANGED: Interface GigabitEthernet0/2, changed stat                                                                                                                     e to administratively down
+Oct 21 10:12:56.291: %LINK-5-CHANGED: Interface Serial0/0/0, changed state to ad                                                                                                                     ministratively down
+Oct 21 10:12:56.291: %LINK-5-CHANGED: Interface Serial0/0/1, changed state to ad                                                                                                                     ministratively down
+Oct 21 10:12:57.303: %LINEPROTO-5-UPDOWN: Line protocol on Interface Embedded-Se                                                                                                                     rvice-Engine0/0, changed state to down
+Oct 21 10:12:57.303: %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthe                                                                                                                     rnet0/0, changed state to down
+Oct 21 10:12:57.303: %LINEPROTO-5-UPDOWN: Line protocol on Interface Serial0/0/0                                                                                                                     , changed state to down
+Oct 21 10:12:57.811: %SYS-5-RESTART: System restarted --
+Cisco IOS Software, C2900 Software (C2900-UNIVERSALK9-M), Version 15.1(4)M4, REL                                                                                                                     EASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2012 by Cisco Systems, Inc.
+Compiled Tue 20-Mar-12 18:57 by prod_rel_team
+Oct 21 10:12:57.983: %SNMP-5-COLDSTART: SNMP agent on host Router is undergoing                                                                                                                      a cold start
+Oct 21 10:12:58.599: %SYS-6-BOOTTIME: Time taken to reboot after reload =  144 s                                                                                                                     econds
+Router>logging synchronous
+          ^
+% Invalid input detected at '^' marker.
+
+Router>enable
+Router#logging synchronous
+               ^
+% Invalid input detected at '^' marker.
+
+Router#line console 0
+         ^
+% Invalid input detected at '^' marker.
+
+Router#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#line console 0
+Router(config-line)#logging synchronous
+Router(config-line)#exec-timeout 0 0
+Router(config-line)#exit
+Router(config)#exit
+Router#
+Oct 21 10:16:17.911: %SYS-5-CONFIG_I: Configured from console by console
+Router#debug ip routing
+IP routing debugging is on
+Router#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#interface gigabitethernet 0/0
+Router(config-if)#ip adress 172.16.3.1
+                       ^
+% Invalid input detected at '^' marker.
+
+Router(config-if)#ip adress 172.16.3.1 255.255.255.0
+                       ^
+% Invalid input detected at '^' marker.
+
+Router(config-if)#ip address 172.16.3.1 255.255.255.0
+Router(config-if)#
+Oct 21 10:17:50.039: is_up: GigabitEthernet0/0 0 state: 6 sub state: 1 line: 0
+Oct 21 10:17:50.039: is_up: GigabitEthernet0/0 0 state: 6 sub state: 1 line: 0
+Oct 21 10:17:50.039: is_up: GigabitEthernet0/0 0 state: 6 sub state: 1 line: 0
+Router(config-if)#no shutdown
+Router(config-if)#
+Oct 21 10:18:00.723: is_up: GigabitEthernet0/0 0 state: 5 sub state: 1 line: 0
+Router(config-if)#e
+Oct 21 10:18:02.679: %LINK-3-UPDOWN: Interface GigabitEthernet0/0, changed state                                                                                                                      to down
+Router(config-if)#exi
+Oct 21 10:18:02.679: is_up: GigabitEthernet0/0 0 state: 0 sub state: 1 line: 0
+Router(config-if)#exit
+Router(config)#
+Oct 21 10:18:06.211: %LINK-3-UPDOWN: Interface GigabitEthernet0/0, changed state                                                                                                                      to up
+Router(config)#
+Oct 21 10:18:06.211: is_up: GigabitEthernet0/0 0 state: 4 sub state: 1 line: 1
+Oct 21 10:18:07.211: %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthe                                                                                                                     rnet0/0, changed state to up
+Oct 21 10:18:07.211: is_up: GigabitEthernet0/0 1 state: 4 sub state: 1 line: 1
+Oct 21 10:18:07.211: RT: updating connected 172.16.3.0/24 (0x0):
+    via 0.0.0.0 Gi0/0
+
+Oct 21 10:18:07.211: RT: add 172.16.3.0/24 via 0.0.0.0, connected metric [0/0]
+Oct 21 10:18:07.211: RT: interface GigabitEthernet0/0 added to routi
+Router(config)#ng table
+Oct 21 10:18:07.211: RT: updating connected 172.16.3.1/32 (0x0):
+    via 0.0.0.0 Gi0/0
+
+Oct 21 10:18:07.211: RT: network 172.16.0.0 is now variably masked
+Oct 21 10:18:07.211: RT: add 172.16.3.1/32 via 0.0.0.0, connected metric [0/0]
+Router(config)#interface serial 0/0/0
+Router(config-if)#ip address 172.16.2.1 255.255.255.0
+Router(config-if)#
+Oct 21 10:18:57.991: is_up: Serial0/0/0 0 state: 6 sub state: 1 line: 0
+Oct 21 10:18:57.991: is_up: Serial0/0/0 0 state: 6 sub state: 1 line: 0
+Oct 21 10:18:57.991: is_up: Serial0/0/0 0 state: 6 sub state: 1 line: 0
+Router(config-if)#clock rate 64000
+Router(config-if)#no shutdown
+Router(config-if)#
+Oct 21 10:19:28.607: is_up: Serial0/0/0 0 state: 4 sub state: 1 line: 0
+Router(config-if)#exit
+Oct 21 10:19:30.607: %LINK-3-UPDOWN: Interface Serial0/0/0, changed state to up
+Router(config)#
+Oct 21 10:19:30.607: is_up: Serial0/0/0 0 state: 4 sub state: 1 line: 0
+Oct 21 10:19:30.607: is_up: Serial0/0/0 0 state: 4 sub state: 1 line: 0
+Oct 21 10:19:30.647: RT: add router 32768, all protocols have local database
+Oct 21 10:19:31.607: %LINEPROTO-5-UPDOWN: Line protocol on Interface Serial0/0/0                                                                                                                     , changed state to up
+Oct 21 10:19:31.607: is_up: Serial0/0/0 1 state: 4 sub state: 1 line: 0
+Oct 21 10:19:31.607: RT: updating connected 172.16.2.0/24 (0x0):
+    via 0.0.0.0 Se0/0/0
+
+Oct 21 10:19:31.
+Router(config)#ex607: RT: add 172.16.2.0/24 via 0.0.0.0, connected metric [0/0]
+Oct 21 10:19:31.607: RT: interface Serial0/0/0 added to routing table
+Oct 21 10:19:31.607: RT: updating connected 172.16.2.1/32 (0x0):
+    via 0.0.0.0 Se0/0/0
+
+Oct 21 10:19:31.607: RT: add 172.16.2.1/32 via 0.0.0.0, connected metric [0/0]
+Router(config)#exit
+Router#
+Oct 21 10:19:34.295: %SYS-5-CONFIG_I: Configured from console by console
+Router#ping 172.16.2.2
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 172.16.2.2, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 28/28/28 ms
+Router#ping 172.16.3.10
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 172.16.3.10, timeout is 2 seconds:
+.....
+Success rate is 0 percent (0/5)
+Router#ping 172.16.3.10
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 172.16.3.10, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+Router#ping 172.16.3.10
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 172.16.3.10, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+Router#ping 172.16.2.2
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 172.16.2.2, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 24/27/28 ms
+Router#

@@ -1,0 +1,97 @@
+b. Wyœwietl zawartoœæ tablicy routingu, aby zweryfikowaæ nowe wpisy. Zauwa¿, ¿e nowa
+trasa jest oznaczona liter¹ S, która mówi, ¿e ta trasa jest tras¹ statyczn¹. Podaj w³aœciwe
+polecenie i umieœæ w sprawozdaniu wynik jego dzia³ania.
+R3#show ip route
+
+
+Zgodnie z zapisem w tablicy routingu ka¿dy pakiet, który dopasuje pierwsze 24 bity adresu
+docelowego do adresu 172.16.1.0/24, zostanie przekazany do routera nastêpnego skoku
+na adres 192.168.1.2. Jakiego interfejsu u¿yje router R3 do przekazywania pakietów do
+sieci 172.16.1.0/24?
+s0/0/1
+
+
+c. Za³ó¿my, ¿e nastepuj¹ce pakiety przyby³y do routera R3. Jak zachowa siê router?
+Przeka¿e pakiety, czy porzuci je? Jeœli R3 przeka¿e pakiet, to który interfejs routera R3
+wyœle pakiet?
+Pakiet Docelowy adres IP Porzuci czy przeka¿e? Interfejs
+1 172.16.2.1 ____porzuci_____ ___________
+2 172.16.1.10 ____przeka¿e_____ ______s/0/0/1_____
+3 192.168.1.2 ____przeka¿e_____ ______s/0/0/1_____
+4 172.16.3.10 ____przeka¿e_____ _______s0/0/1____
+5 192.16.2.10 ____przeka¿e_____ ______G0/0_____
+
+
+d. Wykorzystaj komendê ping do sprawdzenia ³¹cznoœci pomiedzy hostami PC3 i
+PC2. Czy test ping z PC3 do PC2 zako czy³ si sukcesem? ____tak____ Uzasadnij
+odpowiedŸ:
+Adresy ich sieci s¹ w tablicach routingu routerów R2 i R3
+
+
+e. Na routerze R2 skonfiguruj trasê statyczn¹ do sieci 192.168.2.0. Jaki jest adres
+nastêpnego skoku routera R2 realizuj¹cy osi¹gniecie celu dla pakietu przeznaczonego do
+sieci 192.168.2.0/24?
+R2(config)#ip route 192.168.2.0 255.255.255.0 ______192.168.1.1__________
+R2(config)#
+
+
+f. Wyœwietl zawartoœæ tablicy routingu, aby zweryfikowaæ nowe wpisy. Podaj w³aœciwe
+polecenie i umieœæ w sprawozdaniu wynik jego dzia³añia.
+R2#___________show ip route______________________
+
+
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       o - ODR, P - periodic downloaded static route, H - NHRP, l - LISP
+       + - replicated route, % - next hop override
+
+Gateway of last resort is not set
+
+      172.16.0.0/16 is variably subnetted, 5 subnets, 2 masks
+S        172.16.1.0/24 is directly connected, Serial0/0/0
+C        172.16.2.0/24 is directly connected, Serial0/0/0
+L        172.16.2.1/32 is directly connected, Serial0/0/0
+C        172.16.3.0/24 is directly connected, GigabitEthernet0/0
+L        172.16.3.1/32 is directly connected, GigabitEthernet0/0
+S     192.168.2.0/24 is directly connected, Serial0/0/0
+
+
+b. Wyœwietl zawartoœæ tablicy routingu, aby zweryfikowa nowe wpisy. Podaj w³aœciwe
+polecenie.
+R3# _________________show ip route_________________________________________________
+
+
+d. W jaki sposób mo¿na usun¹æ trasy statyczne z tej konfiguracji?
+_______________??????_________________________________________________________
+
+f. Wyœwietl zawartoœæ tablicy routingu, aby zweryfikowaæ nowe wpisy. Podaj w³aœciwe
+polecenie.
+R2# ________________show ip route____________________________________________________
+
+
+W tym momencie R2 posiada kompletn¹ tablicê routingu z poprawnymi trasami do
+wszystkich piêciu sieci przedstawionych na diagramie topologii. Czy to oznacza, ¿e R2
+mo¿e otrzymaæ odpowiedzi ping od wszystkich urz¹dzeñ znajduj¹cych siê na diagramie
+topologii? ____nie____
+Uzasadnij odpowiedŸ.
+Pozostale routery tez musz¹ mieæ odpowiednie wpisy do tabicy routingu
+
+g. Wykorzystaj komendê ping do sprawdzenia ³¹cznoœci pomiêdzy hostami PC2 i PC1. Ten
+test powinien zakoñczyæ siê pora¿k¹, poniewa¿ router R1 nie posiada w tablicy routingu
+powrotnej trasy do sieci 172.16.1.0. Jak proponujesz rozwi¹zaæ ten problem ?
+W routerze R1 trzeba dodac odpowiedni wpis do tablicy routingu.
+
+
+b. Wyœwietl zawartoœæ tablicy routingu, aby zweryfikowaæ nowe wpisy. Podaj w³aœciwe
+polecenie i umieœæ w sprawozdaniu wynik jego dzia³ania.
+R1# _______________show ip route___________________________________________________
+
+
+c. Wykorzystaj komendê ping do sprawdzenia ³¹cznoœci pomiêdzy hostami PC2 i
+PC1. Czy test ping z PC2 do PC1 zakoñczy³ siê sukcesem? _____tak___________
+Czy test ping z PC3 do PC1 zakoñczy³ siê sukcesem? ________tak________
+Czy w tablicy routingu routera R3 istnieje trasa do sieci 172.16.3.0? ___tak_____
