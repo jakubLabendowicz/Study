@@ -1,0 +1,88 @@
+# depslib dependency file v1.0
+1587683646 source:c:\users\uzytkownik\documents\wirtualnyekosystem6\main.cpp
+	<iostream>
+	<string>
+	<locale>
+	"Prostokat.h"
+	"Kwadrat.h"
+	"Organizm.h"
+	"UstawieniaSymulacji.h"
+	"GeneratorLosowy.h"
+	"Sasiedztwo.h"
+
+1585999479 c:\users\uzytkownik\documents\wirtualnyekosystem6\include\prostokat.h
+	<string>
+
+1586624056 c:\users\uzytkownik\documents\wirtualnyekosystem6\include\kwadrat.h
+	"iostream"
+	"Prostokat.h"
+
+1585585033 c:\users\uzytkownik\documents\wirtualnyekosystem6\include\organizm.h
+
+1585585212 c:\users\uzytkownik\documents\wirtualnyekosystem6\include\ustawieniasymulacji.h
+
+1585585003 c:\users\uzytkownik\documents\wirtualnyekosystem6\include\generatorlosowy.h
+	<random>
+
+1586624481 c:\users\uzytkownik\documents\wirtualnyekosystem6\include\sasiedztwo.h
+	"Ustawienia.h"
+
+1585585172 c:\users\uzytkownik\documents\wirtualnyekosystem6\include\ustawienia.h
+
+1585584995 source:c:\users\uzytkownik\documents\wirtualnyekosystem6\src\generatorlosowy.cpp
+	"GeneratorLosowy.h"
+
+1586623803 source:c:\users\uzytkownik\documents\wirtualnyekosystem6\src\kwadrat.cpp
+	"Kwadrat.h"
+	<cmath>
+
+1586624910 source:c:\users\uzytkownik\documents\wirtualnyekosystem6\src\mieszkaniec.cpp
+	"Mieszkaniec.h"
+
+1586624625 c:\users\uzytkownik\documents\wirtualnyekosystem6\include\mieszkaniec.h
+	"UstawieniaSymulacji.h"
+	"Sasiedztwo.h"
+
+1585585027 source:c:\users\uzytkownik\documents\wirtualnyekosystem6\src\organizm.cpp
+	"Organizm.h"
+
+1587683865 source:c:\users\uzytkownik\documents\wirtualnyekosystem6\src\prostokat.cpp
+	"Prostokat.h"
+	<iostream>
+	<string>
+
+1585585330 source:c:\users\uzytkownik\documents\wirtualnyekosystem6\src\sasiedztwo.cpp
+	"Sasiedztwo.h"
+	"GeneratorLosowy.h"
+
+1585584995 source:c:\users\uzytkownik\documents\wirtualnyekosystem5\src\generatorlosowy.cpp
+	"GeneratorLosowy.h"
+
+1585585003 c:\users\uzytkownik\documents\wirtualnyekosystem5\include\generatorlosowy.h
+	<random>
+
+1585585027 source:c:\users\uzytkownik\documents\wirtualnyekosystem5\src\organizm.cpp
+	"Organizm.h"
+
+1585585033 c:\users\uzytkownik\documents\wirtualnyekosystem5\include\organizm.h
+
+1585585330 source:c:\users\uzytkownik\documents\wirtualnyekosystem5\src\sasiedztwo.cpp
+	"Sasiedztwo.h"
+	"GeneratorLosowy.h"
+
+1586624481 c:\users\uzytkownik\documents\wirtualnyekosystem5\include\sasiedztwo.h
+	"Ustawienia.h"
+
+1585585172 c:\users\uzytkownik\documents\wirtualnyekosystem5\include\ustawienia.h
+
+1587716161 source:c:\users\uzytkownik\documents\wirtualnyekosystem5\main.cpp
+	<iostream>
+	<string>
+	<locale>
+	"Organizm.h"
+	"UstawieniaSymulacji.h"
+	"GeneratorLosowy.h"
+	"Sasiedztwo.h"
+
+1585585212 c:\users\uzytkownik\documents\wirtualnyekosystem5\include\ustawieniasymulacji.h
+

@@ -1,0 +1,30 @@
+# depslib dependency file v1.0
+1584977894 source:c:\users\arab0\documents\c++\algorytmy\wirtualnyekosystem\main.cpp
+	<iostream>
+	<string>
+	<locale>
+	"prostokat.h"
+	"organizm.h"
+	"UstawieniaSymulacji.h"
+
+1584976315 source:c:\users\arab0\documents\c++\algorytmy\wirtualnyekosystem\src\organizm.cpp
+	"Organizm.h"
+
+1584976325 c:\users\arab0\documents\c++\algorytmy\wirtualnyekosystem\include\organizm.h
+
+1584976354 source:c:\users\arab0\documents\c++\algorytmy\wirtualnyekosystem\src\prostokat.cpp
+	"Prostokat.h"
+	<iostream>
+	<string>
+
+1584976360 c:\users\arab0\documents\c++\algorytmy\wirtualnyekosystem\include\prostokat.h
+	<string>
+
+1584977825 c:\users\arab0\documents\c++\algorytmy\wirtualnyekosystem\include\ustawieniasymulacji.h
+
+1584978569 source:c:\users\arab0\documents\c++\algorytmy\wirtualnyekosystem\src\generatorlosowy.cpp
+	"GeneratorLosowy.h"
+
+1584978070 c:\users\arab0\documents\c++\algorytmy\wirtualnyekosystem\include\generatorlosowy.h
+	<random>
+
