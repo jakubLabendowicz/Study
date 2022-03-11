@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jakub Łabendowicz</title>
+    <link rel="icon" href="graphics/favicon.png">
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/properties.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+    <script src="js/Wilga.js"></script>
+  </head>
+  <body class="container">
+    <aside class="aside-section">
+      <nav class="aside-container jc-space-beetwen">
+        <a href="index.html" class="logo" id="LG"></a>
+        <button type="button" name="button" class="btn" id="themebutton"></button>
+      </nav>
+    </aside>
+    <div class="content-section">
+
+      <header class="header-section-s">
+        <div class="header-section-container">
+          <div class="m-flex-row-container jc-space-beetwen width-100">
+            <div class="flex-column-container width-45">
+              <div class="header-title">Kontakt</div>
+            </div>
+            <!-- <div class="flex-column-container width-45">
+            </div> -->
+          </div>
+        </div>
+      </header>
+
+      <main class="main-section">
+        <div class="main-container">
+
+          <section class="card" id="form">
+            <div class="m-flex-row-container jc-center">
+              <div class="width-55 flex-column-container">
+                <div>
+                  <div class="card-header">Formularz kontaktowy</div>
+                </div>
+                <form class="flex-column-container jc-center" onsubmit="sendForm(this), window.open('contact.html', '_self')">
+                  <div class="">
+                    <label class="width-100 card-text">Imię i nazwisko*</label>
+                    <input type="text" class="width-100 card-input" required name="name"/>
+                  </div>
+                  <div class="">
+                    <label class="width-100 card-text">E-mail*</label>
+                    <input type="text" class="width-100 card-input" required pattern="(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|'(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*')@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])" name="email"/>
+                  </div>
+                  <div class="">
+                    <label class="width-100 card-text">Numer telefonu</label>
+                    <input type="text" class="width-100 card-input" pattern="^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$" name="phone"/>
+                  </div>
+                  <div class="width-100">
+                    <label class="width-100 card-text">Treść wiadomości*</label>
+                    <div class="width-100"></div>
+                    <textarea class="width-100 card-input" required style="height: 150px" name="message"></textarea>
+                  </div>
+                  <div class="flex-row-container jc-center">
+                    <div class="width-45 card-button" id="form-button">
+                      <input type="submit" value="Wyślij" class="card-button-container width-100" id="form-button-container">
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </section>
+
+          <section class="card" id="contact">
+            <div class="m-flex-row-container jc-space-beetwen">
+              <div class="contact-qr card-graphics m-d-none" id="QR"></div>
+              <div class="width-55 flex-column-container">
+                <div>
+                  <a href="contact.html" class="card-header">Kontakt</a>
+                </div>
+                <div class="flex-column-container">
+                  <div class="width-100 card-box contact-box">
+                    <div class="card-box-container contact-box-container">jalabendowicz@gmail.com</div>
+                  </div>
+                  <div class="width-100 card-box contact-box">
+                    <div class="card-box-container contact-box-container">789 388 378</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+        </div>
+      </main>
+      <footer class="footer-section">
+        <div class="footer-container">
+          <div class="footer-column">
+            <h2 class="footer-column-header">Copyright</h2>
+            <div class="footer-copyright">© 2021 Jakub Łabendowicz. <br> Wszelkie prawa zastrzerzone.</div>
+          </div>
+          <div class="footer-column">
+            <h2 class="footer-column-header">Projekty</h2>
+            <a href="" class="footer-link">Projekt 1</a>
+            <a href="" class="footer-link">projekt 2</a>
+            <a href="" class="footer-link">Projekt 3</a>
+            <a href="" class="footer-link">Projekt 4</a>
+            <br><br>
+            <h2 class="footer-column-header">CV</h2>
+            <a href="CV.pdf" class="footer-link">Zobacz</a>
+          </div>
+          <div class="footer-column">
+            <h2 class="footer-column-header">Social</h2>
+            <a href="https://www.facebook.com/JaLabendowicz" class="footer-link">Facebook</a>
+            <a href="https://www.linkedin.com/in/%C5%82abendowicz-jakub/" class="footer-link">LinkedIn</a>
+            <a href="https://github.com/jakubLabendowicz" class="footer-link">GitHub</a>
+            <a href="https://gitlab.com/jalabendowicz" class="footer-link">GitLab</a>
+            <!-- <br><br>
+            <h2 class="footer-column-header">Kontakt</h2>
+            <a href="" class="footer-link">E-mail</a> -->
+          </div>
+          <div class="footer-column">
+            <h2 class="footer-column-header">Mapa strony</h2>
+            <a href="#form" class="footer-link">Formularz kontaktowy</a>
+            <a href="#contact" class="footer-link">Kontakt</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="js/Theme.js"></script>
+    <script src="js/form.js"></script>
+  </body>
+</html>

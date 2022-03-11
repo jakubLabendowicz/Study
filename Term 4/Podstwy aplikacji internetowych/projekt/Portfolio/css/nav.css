@@ -1,0 +1,43 @@
+.aside-section {
+  /*+++*/
+  /* height: calc(100vh - 30px);
+  width: calc(var(--asideWidth) - 30px); */
+  width: calc(100vw - 100px);
+  height: calc(var(--asideHeight) - 30px);
+
+  background-color: #3a53ff;
+  padding: 15px 50px;;
+}
+
+.aside-container {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  width: 100%;
+}
+
+.logo {
+  border: none;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  background-position: center;
+  background-size: cover;
+  text-decoration: none;
+}
+
+#LG{background-image: url("../graphics/logo.png")}
+
+.btn{
+  border: none;
+  border-radius: 5px;
+  width: 80px;
+  height: 40px;
+  font-size: 15px;
+  text-align: center;
+  background-color: #efefef;
+  color: black;
+}
+.btn:hover {
+  background-color: #808080;
+}

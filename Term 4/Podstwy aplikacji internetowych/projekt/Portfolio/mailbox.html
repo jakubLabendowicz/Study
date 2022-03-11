@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pl" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jakub Łabendowicz</title>
+    <link rel="icon" href="graphics/favicon.png">
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/properties.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+    <script src="js/Wilga.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body class="container" onload="viewMessages()">
+    <aside class="aside-section">
+      <nav class="aside-container jc-space-beetwen">
+        <a href="index.html" class="logo" id="LG"></a>
+        <button type="button" name="button" class="btn" id="themebutton"></button>
+      </nav>
+    </aside>
+    <div class="content-section">
+
+      <header class="header-section-s">
+        <div class="header-section-container">
+          <div class="m-flex-row-container jc-space-beetwen width-100">
+            <div class="flex-column-container width-45">
+              <div class="header-title">Skrzynka kontaktowa</div>
+            </div>
+            <!-- <div class="flex-column-container width-45">
+            </div> -->
+          </div>
+        </div>
+      </header>
+
+      <main class="main-section">
+        <div class="main-container">
+
+          <section class="card" id="contact">
+            <div class="flex-column-container">
+              <div><a href="contact.html" class="card-header">Wiadomości</a></div>
+              <div class="m-flex-row-container jc-space-beetwen fw-wrap" id="messagesContainer">
+
+                <!-- <div class="width-45 card-box" style="text-align: left;">
+                  <div class="card-box-container contact-box-container">
+                    <div>
+                      <div class="card-header">Jakub Łabendowicz</div>
+                      <div class="card-description">jalabendowicz@gmail.com</div>
+                      <div class="card-description">789388378</div>
+                    </div>
+                    <div class="card-text">Wiadomość</div>
+                  </div>
+                </div> -->
+
+              </div>
+            </div>
+          </section>
+
+        </div>
+      </main>
+      <footer class="footer-section">
+        <div class="footer-container">
+          <div class="footer-column">
+            <h2 class="footer-column-header">Copyright</h2>
+            <div class="footer-copyright">© 2021 Jakub Łabendowicz. <br> Wszelkie prawa zastrzerzone.</div>
+          </div>
+          <div class="footer-column">
+            <h2 class="footer-column-header">Projekty</h2>
+            <a href="" class="footer-link">Projekt 1</a>
+            <a href="" class="footer-link">projekt 2</a>
+            <a href="" class="footer-link">Projekt 3</a>
+            <a href="" class="footer-link">Projekt 4</a>
+            <br><br>
+            <h2 class="footer-column-header">CV</h2>
+            <a href="CV.pdf" class="footer-link">Zobacz</a>
+          </div>
+          <div class="footer-column">
+            <h2 class="footer-column-header">Social</h2>
+            <a href="https://www.facebook.com/JaLabendowicz" class="footer-link">Facebook</a>
+            <a href="https://www.linkedin.com/in/%C5%82abendowicz-jakub/" class="footer-link">LinkedIn</a>
+            <a href="https://github.com/jakubLabendowicz" class="footer-link">GitHub</a>
+            <a href="https://gitlab.com/jalabendowicz" class="footer-link">GitLab</a>
+            <!-- <br><br>
+            <h2 class="footer-column-header">Kontakt</h2>
+            <a href="" class="footer-link">E-mail</a> -->
+          </div>
+          <div class="footer-column">
+            <h2 class="footer-column-header">Mapa strony</h2>
+            <a href="#form" class="footer-link">Formularz kontaktowy</a>
+            <a href="#contact" class="footer-link">Kontakt</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="js/Theme.js"></script>
+    <script src="js/messages.js"></script>
+  </body>
+</html>
