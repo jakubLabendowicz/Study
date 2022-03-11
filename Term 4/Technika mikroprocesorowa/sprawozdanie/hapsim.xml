@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<HAPSIM>
+   <General>
+      <Build>2005</Build>
+      <Position>
+         <top>182</top>
+         <bottom>977</bottom>
+         <left>1213</left>
+         <right>1716</right>
+      </Position>
+      <StayOnTop>0</StayOnTop>
+      <Target>ATMega128</Target>
+   </General>
+   <Views>
+      <Terminal>
+         <Name></Name>
+         <Position>
+            <top>19</top>
+            <left>17</left>
+            <width>441</width>
+            <height>637</height>
+         </Position>
+         <Interface></Interface>
+         <localEcho>0</localEcho>
+         <redirectEnable>0</redirectEnable>
+         <Redirection>
+            <Port>n/a</Port>
+            <Baudrate>1200</Baudrate>
+            <Parity>None</Parity>
+            <Stopbits>1</Stopbits>
+            <Flowcontrol>None</Flowcontrol>
+         </Redirection>
+      </Terminal>
+   </Views>
+</HAPSIM>
