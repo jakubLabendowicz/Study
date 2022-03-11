@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Szybki kurs HTML  </title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="baner"> <h2>Szybki kurs HTML</h2> </div>
+    <a href="https://www.w3schools.com/html/html_editors.asp">Podstawowe znaczniki</a> <a href="https://www.w3schools.com/html/html_editors.asp">Tworzenie Tabel</a> <a href="https://www.w3schools.com/html/html_editors.asp">Budowa formularzy</a>
+    <div id="baner1"> <h3>Podstawowe znaczniki HTML to:</h3> </div>
+
+    <ul>
+        <li> &lt;html> - korzeń dokumentu </li>
+        <li> &lt;head> - nagłówek strony z informacjami dla przeglądarek </li>
+        <li> &lt;body> - właściwa treść dokumentu widoczna w oknie przeglądarki </li>
+        <li> &lt;div> - element blokowy </li>
+        <li> &lt;p> - akapit </li>
+        <li> &lt;ol>, &lt;ul> i &lt;li> - elementy listy wypunktowanej lub numerowanej </li>
+        <li> &lt;img> - obrazek </li>
+        <li> &lt;a> - hiperłącze </li>
+
+    </ul>
+    <div id="baner2"> <h3><br>Przykładowy formularz HTML:</br></h3> </div>
+
+    <div>
+        <form action="mailto:jalabendowicz@gmail.com" method="post">
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Nazwisko :</th>
+                        <th><input type="text" name="nazwisko" /></th>
+                    </tr>
+                    <tr>
+                        <th>Wiek :</th>
+                        <th><input type="text" name="wiek" /> </th>
+                    </tr>
+                    <tr>
+                        <th>Państwo :</th>
+                        <th>
+                            <select name="pasntwo">
+                                <option value="p">Polska</option>
+                                <option value="n">Niemcy</option>
+                                <option value="j">Jugosławia</option>
+                            </select>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>Adres e-mail :</th>
+                        <th>  <input type="email" name="email" /> </th>
+                    </tr>
+
+                </tbody>
+            </table>
+            <br /><h3>Zmawiam tutorial z języka: </h3><br />
+            <input type="radio" name="tutorial" value="php" /> PHP <input type="radio" name="tutorial" value="c" /> C/C++ <input type="radio" name="tutorial" value="java" /> Java <br /> <br />
+            <br /><h3>Sposób zapłaty: </h3><br />
+            <input type="radio" name="pay" value="eurocard" /> eurocard <input type="radio" name="pay" value="visa" /> Visa <input type="radio" name="pay" value="przelew" /> Przelew bankowy <br /> <br />
+            <input type="submit" value="Wyślij" />
+            <input type="reset" value="Anuluj" />
+
+        </form>
+    </div>
+
+</body>
+</html>

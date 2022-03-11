@@ -1,0 +1,27 @@
+/* wyzerowanie marginesów i wypełnień: */
+h1, h2, h3 {
+    margin:0;
+    padding:0;
+    }
+    /*formatowanie znacznika body:*/
+    body {
+    background:#4ae;
+    color:#000040;
+    }
+    /*formatowanie znaczników h1, h2 i elementu o identyfikatorze stopka:*/
+    h1,h2, #stopka {
+    background: #000040;
+    color: #8080ff;
+    text-align:center;
+    }
+    /*formatowanie elementu o id="tresc": */
+    #tresc {
+    background:#80ffff;
+    }
+    /*formatowanie elementu o id="menu": */
+    #menu {
+    background:#ffffff;
+    }
+    table {
+        border: 1px solid black;
+    }
