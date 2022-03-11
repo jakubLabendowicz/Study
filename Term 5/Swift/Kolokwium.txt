@@ -1,0 +1,886 @@
+//-------------------------------------------------------------------------Lab8
+//-------------------------------------------------------------------------ZASTOSOWANIE KROTEK I WYLICZEŃ
+let osoba = ("Ania", 16)
+print("\(osoba.0) ma \(osoba.1) lat”)
+//Ania ma 16 lat
+//drugi sposób
+let osoba = (imie:"Ania", wiek: 36)
+print("\(osoba.imie) ma \(osoba.wiek) lat”)
+//krotka trzyelementowa
+let dim3 = (x: 1, y: 0, z: 8)
+print("x=\(dim3.x); y=\(dim3.y); z=\(dim3.z) ")
+
+var osoba = (imie:"Anna", wiek: 16)
+print("\(osoba.imie) ma \(osoba.wiek) lat ")
+osoba = ("Monika", 17)
+print("\(osoba.imie) ma \(osoba.wiek) lat ")
+osoba = (imiona: "Monika", wiek: 18) //błąd
+
+var tab: [(nazwisko: String, nrKarty: Int)] = []
+tab += [(nazwisko: "Kowalski", nrKarty: 123)]
+tab.append((nazwisko: "Kowal", nrKarty: 531))
+for i in 0..<tab.count{
+print("\(tab[i].nazwisko) - nr karty: \(tab[i].nrKarty)")
+}
+
+enum Waluta{
+case pln
+case eur
+case usd
+case chf
+case gbp
+}
+
+enum Mebel{
+case krzeslo, stol, szafa
+}
+
+var walutaPln = Waluta.pln
+var walutaEur = Waluta.eur
+
+var waluta = Waluta.pln
+switch waluta {
+case .chf:
+print("Frank szwajcarski")
+case .eur:
+print("Euro")
+case .gbp:
+print("Funt brytyjski")
+case .pln:
+print("Polski złoty")
+case .usd:
+print("Dolar amerykański")
+}
+
+enum Mebel: CaseIterable{
+case krzeslo, stol, szafa, kanapa
+}
+let liczbaMebli = Mebel.allCases.count
+print("Liczba mebli: \(liczbaMebli)")
+//”Liczba mebli: 4”
+
+for mebel in Mebel.allCases {
+print(mebel)
+}
+
+enum Wymiar {
+case dwuwymiarowy(Double, Double)
+case trojwymiarowy(Double, Double, Double)
+}
+var w = Wymiar.dwuwymiarowy(30.5, 12.0)
+w = .trojwymiarowy(23.8, 0.0, 10.0)
+
+
+
+
+
+//-------------------------------------------------------------------------Lab9
+//-------------------------------------------------------------------------ZŁOŻONE TYPY DANYCH: STRUKTURY, ZBIORY, SŁOWNIKI
+struct Prostopadloscian {
+var a: Double
+var b: Double
+var h:Double
+}
+struct Osoba {
+var imie: String
+var wiek: Int
+}
+let pp = Prostopadloscian(a: 12.0, b: 20, h: 100)
+let os = Osoba(imie: "Janek", wiek: 21)
+
+var pp = Prostopadloscian(a: 12.0, b: 20, h: 100)
+pp.a = 10
+pp.b = 25
+pp.h = 70
+
+
+struct Osoba {
+var imie: String
+var wiek: Int
+
+init(imie: String, wiek: Int) {
+self.imie = imie
+self.wiek = wiek
+}
+}
+var o = Osoba(imie: "Andrzej", wiek:35)
+print(o)
+
+
+var znaki = Set<Character>()
+var osoby = Set<String>()
+znaki.insert("z") //z
+znaki.insert(";") //z, ;
+print(znaki)
+znaki = [] //pusty zbiór
+osoby.insert("Monika")
+osoby.insert("Janek”)
+
+
+var kwiaty: Set<String> = ["róża", "żonkil", "frezja"]
+var kwiaty: Set = ["róża", "żonkil", "frezja"]
+
+
+if kwiaty.isEmpty {
+print("Zbiór jest pusty")
+}
+else {
+print(kwiaty)
+}
+
+
+kwiaty.insert("fiołek")
+print(kwiaty)
+//["żonkil", "frezja", "fiołek", "róża"]
+kwiaty.remove("róża")
+print(kwiaty)
+//["żonkil", "frezja", "fiołek"]
+
+
+if let kwiatDoUsuniecia = kwiaty.remove("fiołek") {
+print("Można usunąć \(kwiatDoUsuniecia)")
+}
+else {
+print("Element do usunięcia nie istnieje")
+}
+
+
+var kwiaty: Set = ["róża", "żonkil", "frezja", "fiołek"]
+for i in kwiaty {
+print(i)
+}
+for i in kwiaty.sorted() {
+print(i)
+}
+
+
+var s1: Set = [1, 5, 3, 27,80]
+var s2: Set = [2, 4, 27, 80]
+var s = s1.intersection(s2).sorted()
+print(s) //[27, 80]
+s = s1.union(s2).sorted()
+print(s) //[1, 2, 3, 4, 5, 27, 80]
+s = s1.subtracting(s2).sorted()
+print(s) //[1, 3, 5]
+s = s1.symmetricDifference(s2).sorted()
+print(s) //[1, 2, 3, 4, 5]
+
+
+if s1.isSubset(of: s2) {
+print("s1 jest podzbiorem s2")
+}else {
+print("s1 nie jest podzbiorem s2")
+}
+if s1.isDisjoint(with: s2) {
+print("s1 i s2 nie maja wspólnych wartości")
+} else {
+print("s1 i s2 mają wspólne wartości")
+}
+
+
+var sl: [Int: String] = [:] // pusty słownik
+print(sl)
+sl[1] = "jeden"
+sl[21] = "dwadzieścia jeden"
+print(sl) //[21: "dwadzieścia jeden", 1: "jeden"]
+
+
+var kraje: [String: String] = ["PL": "Polska", "D": "Niemcy",
+ "A": "Austria", "Hr":"Chorwacja"]
+print("Zdefiniowano \(kraje.count) elementów")
+
+
+if kraje.isEmpty {
+print("Słownik jest pusty")
+} else {
+print("Słownik zawiera \(kraje.count) elementów")
+}
+
+
+kraje["Sk"] = "Słowacja" //dodanie elementu
+print(kraje)
+//["D": "Niemcy", "PL": "Polska", "A": "Austria", "Hr":
+ "Chorwacja", "Sk": "Słowacja"]
+kraje["Cz"] = "Czech"
+print(kraje)
+//["D": "Niemcy", "Hr": "Chorwacja", "Cz": "Czech", "Sk":
+ "Słowacja", "PL": "Polska", "A": "Austria"]
+
+
+kraje["Cz"] = "Czechy"
+print(kraje)
+//["D": "Niemcy", "A": "Austria", "Sk": "Słowacja", "PL":
+"Polska", "Hr": "Chorwacja", "Cz": "Czechy"]
+//albo
+if let kr = kraje.updateValue("Czechy", forKey: "Cz") {
+print("Zmodyfikowano \(kr)")
+} else {
+print("Brakuje szukanego elementu")
+}
+print(kraje)
+//["Sk": "Słowacja", "PL": "Polska", "A": "Austria", "D":
+"Niemcy", "Hr": "Chorwacja", "Cz": "Czechy"]
+
+
+kraje["Cz"] = nil
+print(kraje)
+//["PL": "Polska", "A": "Austria", "D": "Niemcy", "Sk":
+"Słowacja", "Hr": "Chorwacja"]
+//albo
+if let usunietyElem = kraje.removeValue(forKey: "Cz") {
+print("Usunięto \(usunietyElem)")
+} else {
+print("Brakuje elementu do usunicia")
+}
+
+
+for (symbol, panstwo) in kraje {
+print("\(symbol) - \(panstwo)")
+}
+for panstwo in kraje.keys {
+print("\(panstwo)")
+}
+for symbol in kraje.values {
+print(symbol)
+}
+
+
+let symbole = [String] (kraje.keys)
+print(symbole)
+let panstwa = [String] (kraje.values)
+print(panstwa)
+
+
+
+
+
+
+import Foundation
+
+//struct LiczbaZespolona {
+//    var a: Double
+//    var b: Double
+//
+//    init(a:Double, b:Double) {
+//        self.a = a
+//        self.b = b
+//    }
+//
+//    func show() -> () {
+//        print(String(self.a) + " + (" + String(self.b) + ")i")
+//    }
+//}
+//
+//print("Podaj pierwszą liczbę zespoloną")
+//let a1 = Double(readLine()!)!
+//let b1 = Double(readLine()!)!
+//let liczba1 = LiczbaZespolona(a: a1, b: b1)
+//liczba1.show()
+//
+//print("Podaj drugą liczbę zespoloną")
+//let a2 = Double(readLine()!)!
+//let b2 = Double(readLine()!)!
+//let liczba2 = LiczbaZespolona(a: a2, b: b2)
+//liczba2.show()
+//
+//print("Co chcesz zrobić?")
+//let wybor = Int(readLine()!)!
+//
+//switch wybor {
+//case 1:
+//    let dodawanie = LiczbaZespolona(a: liczba1.a + liczba2.a, b: liczba1.b + liczba2.b)
+//    dodawanie.show()
+//case 2:
+//    let odejmowanie = LiczbaZespolona(a: liczba1.a - liczba2.a, b: liczba1.b - liczba2.b)
+//    odejmowanie.show()
+//case 3:
+//    let mnozenie = LiczbaZespolona(a: liczba1.a*liczba2.a + -1*liczba1.b*liczba2.b, b: liczba1.a*liczba2.b+liczba1.b*liczba2.a)
+//    mnozenie.show()
+//default:
+//    print("")
+//}
+
+
+
+//Zad2
+//struct RzutOszczepem {
+//    let id: Int
+//    let proba1: Int
+//    let proba2: Int
+//    let proba3: Int
+//
+//    init(id:Int, proba1:Int, proba2:Int, proba3:Int) {
+//        self.id = id
+//        self.proba1 = proba1
+//        self.proba2 = proba2
+//        self.proba3 = proba3
+//    }
+//
+//    func srednia() -> Double {
+//        var suma = Double(self.proba1 + self.proba2 + self.proba3)
+//        return suma/3.0
+//    }
+//
+//    func show() -> () {
+//        print("ID: \(self.id)")
+//        print("Proba1: \(self.proba1)")
+//        print("Proba2: \(self.proba2)")
+//        print("Proba3: \(self.proba3)")
+//        print("Średnia: \(self.srednia())")
+//    }
+//}
+//
+//print("Zawodnik 0")
+//var z0p1 = Int(readLine()!)!
+//var z0p2 = Int(readLine()!)!
+//var z0p3 = Int(readLine()!)!
+//var z0 = RzutOszczepem(id: 0, proba1: z0p1, proba2: z0p2, proba3: z0p3)
+//
+//print("Zawodnik 1")
+//var z1p1 = Int(readLine()!)!
+//var z1p2 = Int(readLine()!)!
+//var z1p3 = Int(readLine()!)!
+//var z1 = RzutOszczepem(id: 1, proba1: z1p1, proba2: z1p2, proba3: z1p3)
+//
+//print("Zawodnik 2")
+//var z2p1 = Int(readLine()!)!
+//var z2p2 = Int(readLine()!)!
+//var z2p3 = Int(readLine()!)!
+//var z2 = RzutOszczepem(id: 2, proba1: z2p1, proba2: z2p2, proba3: z2p3)
+//
+//print("Zawodnik 3")
+//var z3p1 = Int(readLine()!)!
+//var z3p2 = Int(readLine()!)!
+//var z3p3 = Int(readLine()!)!
+//var z3 = RzutOszczepem(id: 3, proba1: z3p1, proba2: z3p2, proba3: z3p3)
+//
+//print("Wygrał:")
+//var maxs = max(z0.srednia(), z1.srednia(), z2.srednia(), z3.srednia())
+//switch maxs {
+//case z0.srednia():
+//    z0.show()
+//case z1.srednia():
+//    z1.show()
+//case z2.srednia():
+//    z2.show()
+//case z3.srednia():
+//    z3.show()
+//default:
+//    print("")
+//}
+
+
+
+
+//Zad3
+//var samochody = Set<String>()
+//
+//samochody.insert("Audi")
+//samochody.insert("Mazda")
+//samochody.insert("Peugeot")
+//samochody.insert("BMW")
+//samochody.insert("Tesla")
+//samochody.insert("Citroen")
+//
+//print(samochody)
+//
+//print("Podaj model")
+//
+//var model: String = readLine()!
+//
+//if (samochody.remove(model) != nil) {
+//    samochody.remove(model)
+//}
+//print(samochody)
+
+
+
+var student: [String: Int] = [:]
+
+for i in 0..<5 {
+    print("Student \(i)")
+    var nazwisko = readLine()!
+    var index = Int(readLine()!)!
+    student[nazwisko] = index
+}
+
+print(student)
+
+
+
+
+
+
+
+
+
+
+//-------------------------------------------------------------------------Lab10
+//-------------------------------------------------------------------------DEFINIOWANIE KLAS – PROGRAMY ZORIENTOWANE OBIEKTOWO.
+import Foundation
+
+func max_licz(liczba_1:Int, liczba_2:Int, liczba_3:Int) -> Int {
+    if liczba_1 > liczba_2 && liczba_1 > liczba_3 {
+        print(liczba_1)
+        return liczba_1
+    } else if liczba_2 > liczba_3 {
+        print(liczba_2)
+        return liczba_2
+    } else {
+        print(liczba_3)
+        return liczba_3
+    }
+}
+
+func min_licz(liczba_1:Int, liczba_2:Int, liczba_3:Int) ->Int {
+    if liczba_1 < liczba_2 && liczba_1 < liczba_3 {
+        print(liczba_1)
+        return liczba_1
+    } else if liczba_2 < liczba_3 {
+        print(liczba_2)
+        return liczba_2
+    } else {
+        print(liczba_3)
+        return liczba_3
+    }
+}
+
+func min_max_licz(liczba_1:Int, liczba_2:Int, liczba_3:Int) -> (Int, Int) {
+    var min:Int
+    var max:Int
+
+    if liczba_1 > liczba_2 && liczba_1 > liczba_3 {
+        print(liczba_1)
+        max = liczba_1
+    } else if liczba_2 > liczba_3 {
+        print(liczba_2)
+        max = liczba_2
+    } else {
+        print(liczba_3)
+        max = liczba_3
+    }
+
+    if liczba_1 < liczba_2 && liczba_1 < liczba_3 {
+        print(liczba_1)
+        min = liczba_1
+    } else if liczba_2 < liczba_3 {
+        print(liczba_2)
+        min = liczba_2
+    } else {
+        print(liczba_3)
+        min = liczba_3
+    }
+
+    return (min, max)
+}
+
+func zad1() -> () {
+    print()
+}
+//zad1()
+
+
+func dodawanie(liczba_1: Double, liczba_2: Double) -> Double {
+    return liczba_1 + liczba_2
+}
+func odejmowanie(liczba_1: Double, liczba_2: Double) -> Double {
+    return liczba_1 - liczba_2
+}
+func mnozenie(liczba_1: Double, liczba_2: Double) -> Double {
+    return liczba_1 * liczba_2
+}
+func dzielenie(liczba_1: Double, liczba_2: Double) -> Double {
+    return liczba_1 / liczba_2
+}
+func pierwiastkowanie(liczba_1: Double) -> Double {
+    return sqrt(liczba_1)
+}
+
+
+func zad2() -> () {
+    let menu = """
+    1 - dodanie
+    2 - odejmowanie
+    3 - mnożenie
+    4 - dzielenie
+    5 - pierwiastkowanie
+    """
+    print(menu)
+    let wybor = Int(readLine()!)!
+
+    if wybor < 5 && wybor > 0 {
+        let liczba_1 = Double(readLine()!)!
+        let liczba_2 = Double(readLine()!)!
+        switch wybor {
+        case 1: print(dodawanie(liczba_1: liczba_1, liczba_2: liczba_2))
+        case 2: print(odejmowanie(liczba_1: liczba_1, liczba_2: liczba_2))
+        case 3: print(mnozenie(liczba_1: liczba_1, liczba_2: liczba_2))
+        case 4: print(dzielenie(liczba_1: liczba_1, liczba_2: liczba_2))
+        default:
+            print()
+        }
+    } else {
+        let liczba_1 = Double(readLine()!)!
+        print(pierwiastkowanie(liczba_1: liczba_1))
+    }
+}
+//zad2()
+
+
+func getPoint() -> (Double, Double) {
+    print("Podaj punkt")
+    return (Double(readLine()!)!, Double(readLine()!)!)
+}
+
+func odleglosc(point_1: (Double, Double), point_2: (Double, Double)) -> Double {
+    let ox = point_1.0 - point_2.0
+    let oy = point_1.1 - point_2.1
+    return sqrt(ox*ox + oy*oy)
+}
+
+func cwiartka(point_1: (Double, Double)) -> Int {
+    if point_1.0 > 0 {
+        if point_1.1 > 0 {
+            return 1
+        } else {
+            return 4
+        }
+    } else {
+        if point_1.1 > 0 {
+            return 2
+        } else {
+            return 3
+        }
+    }
+}
+
+func gdzie(point_1: (Double, Double), w: Double) -> Int {
+    if point_1.0 > -w && point_1.0 < w && point_1.1 > -w && point_1.1 < w {
+        return 0
+    }
+    else if point_1.0 == -w && point_1.0 == w && point_1.1 == -w && point_1.1 == w {
+        return 1
+    }
+    else {
+        return 2
+    }
+}
+
+func zad3() -> () {
+    let point_1: (Double,Double) = getPoint()
+    let point_2: (Double,Double) = getPoint()
+    print(odleglosc(point_1: point_1, point_2: point_2))
+    print(cwiartka(point_1: point_1))
+    print(gdzie(point_1: point_1, w: 15.0))
+}
+//zad3()
+
+
+
+
+
+class Osoba {
+    var imie: String
+    var nazwisko: String
+    var rok: Int
+
+    init(imie: String, nazwisko: String, rok: Int) {
+        self.imie = imie
+        self.nazwisko = nazwisko
+        self.rok = rok
+    }
+
+    func policzWiek() -> Int {
+        return 2021 - self.rok
+    }
+
+    func show() -> () {
+        var show_var = """
+        Imię: \(self.imie)
+        Nazwisko: \(self.nazwisko)
+        Rok: \(self.rok)
+        Wiek: \(self.policzWiek())
+        """
+        print(show_var)
+    }
+}
+
+func zad5() -> () {
+    var osoba_1 = Osoba(imie: "Kuba", nazwisko: "Łabendowicz", rok: 2000)
+    osoba_1.show()
+}
+zad5()
+
+
+
+
+
+
+
+
+
+
+//-------------------------------------------------------------------------Lab11
+//-------------------------------------------------------------------------DEFINIOWANIE KLAS – PROGRAMY ZORIENTOWANE OBIEKTOWO.
+import Foundation
+
+class Prostakat {
+    var edgeA: Double
+    var edgeB: Double
+
+    init(edgeA: Double, edgeB: Double) {
+        self.edgeA = edgeA
+        self.edgeB = edgeB
+    }
+
+    func pole() -> Double {
+        return edgeA * edgeB
+    }
+
+    func obwod() -> Double {
+        return 2*edgeA + 2*edgeB
+    }
+
+    func show() -> () {
+        print("Pole: \(pole()) Obwód: \(obwod())")
+    }
+}
+
+var prostakat = Prostakat(edgeA: 5.0,edgeB: 2.0)
+prostakat.show()
+
+class Prostopadloscan: Prostakat {
+    var height: Double
+
+    init(edgeA: Double, edgeB: Double, height: Double) {
+        self.height = height
+        super.init(edgeA: edgeA, edgeB: edgeB)
+    }
+
+    override func pole() -> Double {
+        return 2 * edgeA * edgeB + 2 * edgeA * height + 2 * edgeB * height
+    }
+
+    override func obwod() -> Double {
+        return 4*edgeA + 4*edgeB + 4*height
+    }
+
+    func objetosc() -> Double {
+        return edgeA * edgeB * height
+    }
+
+    override func show() -> () {
+        print("Pole: \(pole()) Obwód: \(obwod()) Objetosc: \(objetosc())")
+    }
+}
+
+var prostopadloscan = Prostopadloscan(edgeA: 5.0, edgeB: 2.0, height: 3.0)
+prostopadloscan.show()
+
+class Osoba {
+    var imie: String
+    var nazwisko: String
+    var rokUrodzenia: Int
+
+    init(imie: String, nazwisko: String, rokUrodzenia: Int) {
+        self.imie = imie
+        self.nazwisko = nazwisko
+        self.rokUrodzenia = rokUrodzenia
+    }
+
+    func wiek() -> Int {
+        return 2022 - rokUrodzenia
+    }
+
+    func show() -> () {
+        print("Imię: \(imie) Nazwisko: \(nazwisko) Rok urodzenia: \(rokUrodzenia)")
+    }
+}
+
+class Student: Osoba {
+    static func create() -> Student {
+        let imie: String = readLine()!
+        let nazwisko: String = readLine()!
+        let rokUrodzenia: Int = Int(readLine()!)!
+        let numerIndexu: Int = Int(readLine()!)!
+        var kierunekStudiow: Set<String>
+        var rokStudiow: Int = Int(readLine()!)!
+        var przedmiot1: String = readLine()!
+        var ocena1: Double = Double(readLine()!)!
+        var przedmiot2: String = readLine()!
+        var ocena2: Double = Double(readLine()!)!
+        var przedmiot3: String = readLine()!
+        var ocena3: Double = Double(readLine()!)!
+        var przedmiot4: String = readLine()!
+        var ocena4: Double = Double(readLine()!)!
+        var przedmiot5: String = readLine()!
+        var ocena5: Double = Double(readLine()!)!
+
+        var student = Student(imie: imie, nazwisko: nazwisko, rokUrodzenia: rokUrodzenia, numerIndexu: numerIndexu, kierunekStudiow: <#T##Set<String>#>, rokStudiow: rokStudiow, oceny: [przedmiot1: ocena1, przedmiot2: ocena2, przedmiot3: ocena3, przedmiot4: ocena4, przedmiot5: ocena5])
+        return student
+    }
+
+    var numerIndexu: Int
+    var kierunekStudiow: Set<String>
+    var rokStudiow: Int
+    var oceny: [String: Double]
+
+    init(imie: String, nazwisko: String, rokUrodzenia: Int, numerIndexu: Int, kierunekStudiow: Set<String>, rokStudiow: Int, oceny: [String: Double]) {
+        self.numerIndexu = numerIndexu
+        self.kierunekStudiow = kierunekStudiow
+        self.rokStudiow = rokStudiow
+        self.oceny = oceny
+        for ocena in oceny {
+            if ocena.value < 2.0 || ocena.value > 5.0 {
+                self.oceny.removeValue(forKey: ocena.key)
+            }
+        }
+        super.init(imie: imie, nazwisko: nazwisko, rokUrodzenia: rokUrodzenia)
+    }
+
+    func srednia() -> Double {
+        var suma = 0.0
+        for ocena in oceny {
+            suma += ocena.value
+        }
+        return suma/Double(oceny.count)
+    }
+
+    override func show() -> () {
+        print("Imię: \(imie) Nazwisko: \(nazwisko) Rok urodzenia: \(rokUrodzenia) Numer indexu: \(numerIndexu) Kierunek studiów: \(kierunekStudiow) Rok studiów: \(rokStudiow) Oceny:")
+        for ocena in oceny {
+            print("\(ocena.key) - \(ocena.value)")
+        }
+    }
+}
+
+
+
+
+
+
+//-------------------------------------------------------------------------Lab12
+//-------------------------------------------------------------------------PROGRAMY Z UŻYCIEM PROTOKOŁÓW
+import Foundation
+
+protocol LiczbaZespolona {
+    var re: Int {get}
+    var im: Int {get}
+}
+
+class OperacjeNaLiczbachZespolonych: LiczbaZespolona {
+    var re1: Int
+    var im1: Int
+    var re2: Int
+    var im2: Int
+    var liczba: (Int, Int) = (0, 0)
+    var re: Int {return liczba.0}
+    var im: Int {return liczba.1}
+    
+    init(re1:Int, im1:Int, re2: Int, im2: Int) {
+        self.re1 = re1
+        self.im1 = im1
+        self.re2 = re2
+        self.im2 = im2
+    }
+    
+    func dodaj() -> () {
+        liczba = (re1 + re2, im1 + im2)
+    }
+    
+    func odejmij() -> () {
+        liczba = (re1 - re2, im1 - im2)
+    }
+    
+    func show() -> () {
+        print("RE: " + String(re) + " IM:" + String(im))
+    }
+}
+
+
+protocol LiczbaLosowa {
+    func generujLiczbe() -> Int
+}
+
+class Liczby: LiczbaLosowa {
+    func generujLiczbe() -> Int {
+        return Int.random(in: 0..<10)
+    }
+    
+    var a: Int = 0
+    var b: Int = 0
+    
+    init() {
+        self.a = generujLiczbe()
+        self.b = generujLiczbe()
+    }
+
+    
+    func show() -> () {
+        print("A: " + String(a) + " B: " + String(b))
+    }
+    
+    func pot(x:Double) -> () {
+        a=Int(pow(Double(a), x))
+        b=Int(pow(Double(b), x))
+    }
+}
+
+
+
+func zad1() -> () {
+    let op = OperacjeNaLiczbachZespolonych(re1: 1, im1: 2, re2: 3, im2: 4)
+    op.dodaj()
+    op.show()
+    op.odejmij()
+    op.show()
+}
+
+func zad2() -> () {
+    let l = Liczby()
+    l.show()
+    l.pot(x: 2)
+    l.show()
+}
+
+enum walidacja: Error {
+    case przezZero
+    case pierwiastekUjemny
+}
+
+func podziel(l1: Int, l2: Int) throws {
+    if l2 != 0 {
+        print(l1/l2)
+    }
+    else {
+        throw walidacja.przezZero
+    }
+}
+
+func potega(l1: Int, l2: Int) throws {
+    if l1 >= 0 {
+        print(Int(pow(Double(l1), Double(l2))))
+    }
+    else {
+        throw walidacja.pierwiastekUjemny
+    }
+}
+
+func zad3() -> () {
+    do{
+        try podziel(l1: 1, l2: 0)
+    } catch walidacja.przezZero {
+        print("Podane haslo jest za krótkie")
+    } catch walidacja.pierwiastekUjemny{
+        print("Podane hasło jest za długie")
+    }
+}
+
+func zad4() -> () {
+
+}
+
+zad1()
+zad2()
+zad3()
+zad4()

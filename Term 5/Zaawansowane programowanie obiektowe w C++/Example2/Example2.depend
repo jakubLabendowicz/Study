@@ -1,0 +1,116 @@
+# depslib dependency file v1.0
+1626007742 source:c:\dokumenty\zakupowa\laboratoriacpp\example2\figure.cpp
+	<iostream>
+	"Figure.h"
+
+1626066134 c:\dokumenty\zakupowa\laboratoriacpp\example2\figure.h
+
+1626016848 source:c:\dokumenty\zakupowa\laboratoriacpp\example2\main.cpp
+	<iostream>
+	"Figure.h"
+	"Square.h"
+	"Circle.h"
+
+1626066216 c:\dokumenty\zakupowa\laboratoriacpp\example2\square.h
+	"Figure.h"
+
+1626014793 source:c:\dokumenty\zakupowa\laboratoriacpp\example2\square.cpp
+	<iostream>
+	"Figure.h"
+	"Square.h"
+
+1626008644 source:c:\dokumenty\zakupowa\laboratoriacpp\example2\circle.cpp
+	<iostream>
+	"Figure.h"
+	"Circle.h"
+
+1626066250 c:\dokumenty\zakupowa\laboratoriacpp\example2\circle.h
+
+1626016848 source:c:\dokumenty\dydaktyka\20212022\zaawansowane programowanie w c++\kody do lab\example2\main.cpp
+	<iostream>
+	"Figure.h"
+	"Square.h"
+	"Circle.h"
+
+1626066134 c:\dokumenty\dydaktyka\20212022\zaawansowane programowanie w c++\kody do lab\example2\figure.h
+
+1626066216 c:\dokumenty\dydaktyka\20212022\zaawansowane programowanie w c++\kody do lab\example2\square.h
+	"Figure.h"
+
+1626066250 c:\dokumenty\dydaktyka\20212022\zaawansowane programowanie w c++\kody do lab\example2\circle.h
+
+1626008644 source:c:\dokumenty\dydaktyka\20212022\zaawansowane programowanie w c++\kody do lab\example2\circle.cpp
+	<iostream>
+	"Figure.h"
+	"Circle.h"
+
+1626007742 source:c:\dokumenty\dydaktyka\20212022\zaawansowane programowanie w c++\kody do lab\example2\figure.cpp
+	<iostream>
+	"Figure.h"
+
+1626014793 source:c:\dokumenty\dydaktyka\20212022\zaawansowane programowanie w c++\kody do lab\example2\square.cpp
+	<iostream>
+	"Figure.h"
+	"Square.h"
+
+1626012244 source:c:\users\student.win-b7opo92uo3q\downloads\example2\circle.cpp
+	<iostream>
+	"Figure.h"
+	"Circle.h"
+
+1626069734 c:\users\student.win-b7opo92uo3q\downloads\example2\figure.h
+
+1626069850 c:\users\student.win-b7opo92uo3q\downloads\example2\circle.h
+
+1626011342 source:c:\users\student.win-b7opo92uo3q\downloads\example2\figure.cpp
+	<iostream>
+	"Figure.h"
+
+1626018392 source:c:\users\student.win-b7opo92uo3q\downloads\example2\square.cpp
+	<iostream>
+	"Figure.h"
+	"Square.h"
+
+1626069816 c:\users\student.win-b7opo92uo3q\downloads\example2\square.h
+	"Figure.h"
+
+1634753775 source:c:\users\student.win-b7opo92uo3q\downloads\example2\main.cpp
+	<iostream>
+	"Figure.h"
+	"Square.h"
+	"Circle.h"
+
+1634753949 source:c:\users\student.win-b7opo92uo3q\downloads\example2\src\employee.cpp
+	"Employee.h"
+	<iostream>
+
+1634753667 c:\users\student.win-b7opo92uo3q\downloads\example2\include\employee.h
+	<iostream>
+
+1626012244 source:e:\semestr 5\zaawansowane programowanie obiektowe w c++\example2\circle.cpp
+	<iostream>
+	"Figure.h"
+	"Circle.h"
+
+1626069734 e:\semestr 5\zaawansowane programowanie obiektowe w c++\example2\figure.h
+
+1626069850 e:\semestr 5\zaawansowane programowanie obiektowe w c++\example2\circle.h
+
+1635196381 source:e:\semestr 5\zaawansowane programowanie obiektowe w c++\example2\figure.cpp
+	<iostream>
+	"Figure.h"
+
+1634753775 source:e:\semestr 5\zaawansowane programowanie obiektowe w c++\example2\main.cpp
+	<iostream>
+	"Figure.h"
+	"Square.h"
+	"Circle.h"
+
+1626069816 e:\semestr 5\zaawansowane programowanie obiektowe w c++\example2\square.h
+	"Figure.h"
+
+1626018392 source:e:\semestr 5\zaawansowane programowanie obiektowe w c++\example2\square.cpp
+	<iostream>
+	"Figure.h"
+	"Square.h"
+

@@ -1,0 +1,43 @@
+#include <targets\AT91SAM7.h>
+
+void time_delay(int ms){
+volatile int aa,bb;
+  for(aa=0;aa<=ms;aa++){
+    for(bb=0;bb<=3000;bb++){
+      __asm__("NOP");
+      }}}
+
+Sterownik (driver) traktowany jest jako zestaw funkcji przeznaczonych do obsługi danego urządzenia peryferyjnego. 
+Sterowniki powinny realizować następujące funkcje: 
+
+
+void PIO_clock_enable(int pio_pcer, int a_b){ //pio_pcer 1 dla enable, 0 dla diable; a_b: 0 - PIOA, 1 - PIOB
+if(pio_pcer==1){
+PMC_PCER|=pio_pcer<<a_b+2;}
+if(pio_pcer==0){
+PMC_PCDR|=1<<a_b+2;}
+}
+
+
+void PIO_enable(int line_no, int ena) //załączanie kontroli nad wybranym PINem dla PIO Controllera (np. PIN 65 kontroluje PB20), dwa parametry: nr linii i stan 0/1 gdzie
+PER lub PDR       //1 załącza kontrolę PIO dla danej linii; 0 wyłącza kontrolę PIO dla danej linii
+
+void PIO_output_enable() //wybór czy dana linia ma być output czy input - dwa parametry, nr linii i stan: 0-input, 1-output
+OER lub ODR
+
+void PIO_output_state() // ustawienie stanu wybranej linii,  dwa parametry, nr linii i stan: 0-cleared, 1-set
+SODR lub CODR lub ODSR (jeśli używasz ODSR pamiętaj o OWER)
+
+void PIO_output_negate(numer linii)  //neguje stan linii output, pamiętać o konfiguracji w OWER - negacja może być przeprowadzona 
+negacja wyłącznie poprzez ODSR (jeśli używasz ODSR pamiętaj o OWER)
+
+//Funkcje odczytu przycisków
+unsigned int SW_odczyt(unsigned int SW_numer) // czytaj stan przycisku SW1 lub SW2 
+
+void SW_czytaj(int Sw) // funkcja czeka dopóki przycisk jest naciśnięty
+
+int main void(){
+
+0. Przetestować linię OUTPUT - zmiana stanu LCD_BL co 500ms (użyć time_delay)
+1. Program ma reagować na wciskanie klawisza SW1 (PB24) zapaleniem LCD_BL(PB20) i klawisza SW2 gaszeniem LCD_BL(PB20)
+2. Program ma reagować zmianą stanu LCD_BL na każde naciśnięcie klawisza SW1, jedno naciśnięcie - jedna zmiana stanu. Do tego wykorzystać funkcję SW_czytaj
