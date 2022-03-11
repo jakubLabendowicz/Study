@@ -1,0 +1,4 @@
+Agyfgad 20 Polska dqd@bhh.pl C, C#, PHP, JavaScript eurocard
+Affwe 21 Francja dqd@bhh.pl C, Java, HTML, XML przelew bankowy
+Agyfgad 15 Francja dqd@bhh.pl CPP eurocard
+Labendowicz 70 Polska dqd@bhh.pl CPP, Java, C#, HTML, CSS eurocard
