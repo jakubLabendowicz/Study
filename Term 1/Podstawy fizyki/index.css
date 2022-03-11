@@ -1,0 +1,25 @@
+.point-1{
+  top: auto;
+  left: auto;
+  width: 20px;
+  height: 20px;
+  border-radius: 100px;
+  background-color: red;
+}
+
+.point-2{
+  top: auto;
+  left: auto;
+  width: 20px;
+  height: 20px;
+  border-radius: 100px;
+  background-color: blue;
+}
+
+.table{
+  left: 0px;
+  top: 0px;
+  bottom: 0px;
+  width: 10px;
+  background-color: red;
+}
