@@ -1,0 +1,236 @@
+C:\Users\student>ping -6 fe80::fa72:eaff:feb1:da81%11
+
+Badanie fe80::fa72:eaff:feb1:da81%11 z 32 bajtami danych:
+Odpowiedź z fe80::fa72:eaff:feb1:da81%11: czas=4ms
+Odpowiedź z fe80::fa72:eaff:feb1:da81%11: czas<1 ms
+Odpowiedź z fe80::fa72:eaff:feb1:da81%11: czas<1 ms
+Odpowiedź z fe80::fa72:eaff:feb1:da81%11: czas<1 ms
+
+Statystyka badania ping dla fe80::fa72:eaff:feb1:da81%11:
+    Pakiety: Wysłane = 4, Odebrane = 4, Utracone = 0
+             (0% straty),
+Szacunkowy czas błądzenia pakietów w millisekundach:
+    Minimum = 0 ms, Maksimum = 4 ms, Czas średni = 1 ms
+
+
+
+
+
+R1#show ipv6 int brief
+Em0/0                  [administratively down/down]
+    unassigned
+GigabitEthernet0/0     [administratively down/down]
+    unassigned
+GigabitEthernet0/1     [up/up]
+    FE80::FA72:EAFF:FEB1:DA81
+    2001:DB8:ACAD:A:FA72:EAFF:FEB1:DA81
+GigabitEthernet0/2     [administratively down/down]
+    unassigned
+Serial0/0/0            [down/down]
+    unassigned
+Serial0/0/1            [up/up]
+    FE80::FA72:EAFF:FEB1:DA80
+    FC00::1
+
+
+
+C:\Users\student>ping -6 2001:db8:acad:b::
+
+Badanie 2001:db8:acad:b:: z 32 bajtami danych:
+Sieć docelowa jest nieosiągalna.
+Sieć docelowa jest nieosiągalna.
+Sieć docelowa jest nieosiągalna.
+Sieć docelowa jest nieosiągalna.
+
+Statystyka badania ping dla 2001:db8:acad:b:::
+    Pakiety: Wysłane = 4, Odebrane = 0, Utracone = 4
+             (100% straty),
+
+
+
+
+R1#show ipv6 interface brief
+Em0/0                  [administratively down/down]
+    unassigned
+GigabitEthernet0/0     [administratively down/down]
+    unassigned
+GigabitEthernet0/1     [up/up]
+    FE80::FA72:EAFF:FEB1:DA81
+    2001:DB8:ACAD:A:FA72:EAFF:FEB1:DA81
+GigabitEthernet0/2     [administratively down/down]
+    unassigned
+Serial0/0/0            [down/down]
+    unassigned
+Serial0/0/1            [up/up]
+    FE80::FA72:EAFF:FEB1:DA80
+    FC00::1
+
+
+R1#show ipv6 int
+GigabitEthernet0/1 is up, line protocol is up
+  IPv6 is enabled, link-local address is FE80::FA72:EAFF:FEB1:DA81
+  No Virtual link-local address(es):
+  Global unicast address(es):
+    2001:DB8:ACAD:A:FA72:EAFF:FEB1:DA81, subnet is 2001:DB8:ACAD:A::/64 [EUI]
+  Joined group address(es):
+    FF02::1
+    FF02::1:FFB1:DA81
+  MTU is 1500 bytes
+  ICMP error messages limited to one every 100 milliseconds
+  ICMP redirects are enabled
+  ICMP unreachables are sent
+  ND DAD is enabled, number of DAD attempts: 1
+  ND reachable time is 30000 milliseconds (using 30000)
+  ND advertised reachable time is 0 (unspecified)
+  ND advertised retransmit interval is 0 (unspecified)
+  ND router advertisements are sent every 200 seconds
+  ND router advertisements live for 1800 seconds
+  ND advertised default router preference is Medium
+  Hosts use stateless autoconfig for addresses.
+Serial0/0/1 is up, line protocol is up
+  IPv6 is enabled, link-local address is FE80::FA72:EAFF:FEB1:DA80
+  No Virtual link-local address(es):
+  Global unicast address(es):
+    FC00::1, subnet is FC00::/64 [DUP]
+  Joined group address(es):
+    FF02::1
+    FF02::2
+    FF02::1:FFB1:DA80
+  MTU is 1500 bytes
+  ICMP error messages limited to one every 100 milliseconds
+  ICMP redirects are enabled
+  ICMP unreachables are sent
+  ND DAD is enabled, number of DAD attempts: 1
+  ND reachable time is 30000 milliseconds (using 30000)
+  ND RAs are suppressed (periodic)
+  Hosts use stateless autoconfig for addresses.
+
+
+
+R1#show ipv6 route
+IPv6 Routing Table - default - 4 entries
+Codes: C - Connected, L - Local, S - Static, U - Per-user Static route
+       B - BGP, R - RIP, H - NHRP, I1 - ISIS L1
+       I2 - ISIS L2, IA - ISIS interarea, IS - ISIS summary, D - EIGRP
+       EX - EIGRP external, ND - ND Default, NDp - ND Prefix, DCE - Destination
+       NDr - Redirect, O - OSPF Intra, OI - OSPF Inter, OE1 - OSPF ext 1
+       OE2 - OSPF ext 2, ON1 - OSPF NSSA ext 1, ON2 - OSPF NSSA ext 2
+       a - Application
+C   2001:DB8:ACAD:A::/64 [0/0]
+     via GigabitEthernet0/1, directly connected
+L   2001:DB8:ACAD:A:FA72:EAFF:FEB1:DA81/128 [0/0]
+     via GigabitEthernet0/1, receive
+C   FC00::/64 [0/0]
+     via Serial0/0/1, directly connected
+L   FF00::/8 [0/0]
+     via Null0, receive
+
+
+
+R1#show ipv6 route
+IPv6 Routing Table - default - 5 entries
+Codes: C - Connected, L - Local, S - Static, U - Per-user Static route
+       B - BGP, R - RIP, H - NHRP, I1 - ISIS L1
+       I2 - ISIS L2, IA - ISIS interarea, IS - ISIS summary, D - EIGRP
+       EX - EIGRP external, ND - ND Default, NDp - ND Prefix, DCE - Destination
+       NDr - Redirect, O - OSPF Intra, OI - OSPF Inter, OE1 - OSPF ext 1
+       OE2 - OSPF ext 2, ON1 - OSPF NSSA ext 1, ON2 - OSPF NSSA ext 2
+       a - Application
+C   2001:DB8:ACAD:A::/64 [0/0]
+     via GigabitEthernet0/1, directly connected
+L   2001:DB8:ACAD:A:FA72:EAFF:FEB1:DA81/128 [0/0]
+     via GigabitEthernet0/1, receive
+S   2001:DB8:ACAD:B::/64 [1/0]
+     via Serial0/0/1, directly connected
+C   FC00::/64 [0/0]
+     via Serial0/0/1, directly connected
+L   FF00::/8 [0/0]
+     via Null0, receive
+
+
+
+C:\Users\student>ping -6 2001:db8:acad:b:998a:52d7:cbd5:15e2
+
+Badanie 2001:db8:acad:b:998a:52d7:cbd5:15e2 z 32 bajtami danych:
+Host docelowy jest nieosiągalny.
+Host docelowy jest nieosiągalny.
+Host docelowy jest nieosiągalny.
+Host docelowy jest nieosiągalny.
+
+Statystyka badania ping dla 2001:db8:acad:b:998a:52d7:cbd5:15e2:
+    Pakiety: Wysłane = 4, Odebrane = 0, Utracone = 4
+             (100% straty),
+
+C:\Users\student>ping -6 2001:db8:acad:b::
+
+Badanie 2001:db8:acad:b:: z 32 bajtami danych:
+Host docelowy jest nieosiągalny.
+Host docelowy jest nieosiągalny.
+Host docelowy jest nieosiągalny.
+Host docelowy jest nieosiągalny.
+
+Statystyka badania ping dla 2001:db8:acad:b:::
+    Pakiety: Wysłane = 4, Odebrane = 0, Utracone = 4
+             (100% straty),
+
+
+
+
+IPv6 Routing Table - default - 5 entries
+Codes: C - Connected, L - Local, S - Static, U - Per-user Static route
+       B - BGP, R - RIP, H - NHRP, I1 - ISIS L1
+       I2 - ISIS L2, IA - ISIS interarea, IS - ISIS summary, D - EIGRP
+       EX - EIGRP external, ND - ND Default, NDp - ND Prefix, DCE - Destination
+       NDr - Redirect, O - OSPF Intra, OI - OSPF Inter, OE1 - OSPF ext 1
+       OE2 - OSPF ext 2, ON1 - OSPF NSSA ext 1, ON2 - OSPF NSSA ext 2
+       a - Application
+C   2001:DB8:ACAD:A::/64 [0/0]
+     via GigabitEthernet0/1, directly connected
+L   2001:DB8:ACAD:A:FA72:EAFF:FEB1:DA81/128 [0/0]
+     via GigabitEthernet0/1, receive
+S   2001:DB8:ACAD:B::/64 [1/0]
+     via FC00::2
+C   FC00::/64 [0/0]
+     via Serial0/0/1, directly connected
+L   FF00::/8 [0/0]
+     via Null0, receive
+
+
+
+
+
+IPv6 Routing Table - default - 5 entries
+Codes: C - Connected, L - Local, S - Static, U - Per-user Static route
+       B - BGP, R - RIP, H - NHRP, I1 - ISIS L1
+       I2 - ISIS L2, IA - ISIS interarea, IS - ISIS summary, D - EIGRP
+       EX - EIGRP external, ND - ND Default, NDp - ND Prefix, DCE - Destination
+       NDr - Redirect, O - OSPF Intra, OI - OSPF Inter, OE1 - OSPF ext 1
+       OE2 - OSPF ext 2, ON1 - OSPF NSSA ext 1, ON2 - OSPF NSSA ext 2
+       a - Application
+S   ::/0 [1/0]
+     via Serial0/0/1, directly connected
+C   2001:DB8:ACAD:A::/64 [0/0]
+     via GigabitEthernet0/1, directly connected
+L   2001:DB8:ACAD:A:FA72:EAFF:FEB1:DA81/128 [0/0]
+     via GigabitEthernet0/1, receive
+C   FC00::/64 [0/0]
+     via Serial0/0/1, directly connected
+L   FF00::/8 [0/0]
+     via Null0, receive
+
+
+
+
+C:\Users\student>ping -6 2001:db8:acad:b:998a:52d7:cdb5:15e2
+
+Badanie 2001:db8:acad:b:998a:52d7:cdb5:15e2 z 32 bajtami danych:
+Odpowiedź z 2001:db8:acad:b:998a:52d7:cdb5:15e2: czas=28ms
+Odpowiedź z 2001:db8:acad:b:998a:52d7:cdb5:15e2: czas=26ms
+Odpowiedź z 2001:db8:acad:b:998a:52d7:cdb5:15e2: czas=26ms
+Odpowiedź z 2001:db8:acad:b:998a:52d7:cdb5:15e2: czas=26ms
+
+Statystyka badania ping dla 2001:db8:acad:b:998a:52d7:cdb5:15e2:
+    Pakiety: Wysłane = 4, Odebrane = 4, Utracone = 0
+             (0% straty),
+Szacunkowy czas błądzenia pakietów w millisekundach:
+    Minimum = 26 ms, Maksimum = 28 ms, Czas średni = 26 ms

@@ -1,0 +1,152 @@
+*Nov 26 16:24:49.979: %OSPF-5-ADJCHG: Process 1, Nbr 192.168.10.5 on Serial0/0/0 from LOADING to FULL, Loading Done
+*Nov 26 16:26:30.019: %OSPF-5-ADJCHG: Process 1, Nbr 192.168.10.6 on Serial0/0/1 from LOADING to FULL, Loading Done
+
+R2# show ip protocols
+Routing Protocol is "application"
+  Sending updates every 0 seconds
+  Invalid after 0 seconds, hold down 0, flushed after 0
+  Outgoing update filter list for all interfaces is not set
+  Incoming update filter list for all interfaces is not set
+  Maximum path: 32
+  Routing for Networks:
+  Routing Information Sources:
+    Gateway         Distance      Last Update
+  Distance: (default is 4)
+
+Routing Protocol is "ospf 1"
+  Outgoing update filter list for all interfaces is not set
+  Incoming update filter list for all interfaces is not set
+  Router ID 192.168.10.9
+  Number of areas in this router is 1. 1 normal 0 stub 0 nssa
+  Maximum path: 4
+  Routing for Networks:
+    10.10.10.0 0.0.0.255 area 0
+    192.168.10.0 0.0.0.3 area 0
+    192.168.10.8 0.0.0.3 area 0
+  Routing Information Sources:
+    Gateway         Distance      Last Update
+    192.168.10.6         110      00:01:44
+    192.168.10.5         110      00:02:54
+  Distance: (default is 110)
+
+
+R2#show ip ospf database
+
+            OSPF Router with ID (192.168.10.9) (Process ID 1)
+
+                Router Link States (Area 0)
+
+Link ID         ADV Router      Age         Seq#       Checksum Link count
+192.168.10.5    192.168.10.5    295         0x80000003 0x001A61 5
+192.168.10.6    192.168.10.6    225         0x80000006 0x004508 5
+192.168.10.9    192.168.10.9    224         0x80000004 0x00C845 5
+
+R2#show ip ospf neighbor detail
+ Neighbor 192.168.10.6, interface address 192.168.10.10
+    In the area 0 via interface Serial0/0/1
+    Neighbor priority is 0, State is FULL, 6 state changes
+    DR is 0.0.0.0 BDR is 0.0.0.0
+    Options is 0x12 in Hello (E-bit, L-bit)
+    Options is 0x52 in DBD (E-bit, L-bit, O-bit)
+    LLS Options is 0x1 (LR)
+    Dead timer due in 00:00:30
+    Neighbor is up for 00:04:08
+    Index 2/2, retransmission queue length 0, number of retransmission 0
+    First 0x0(0)/0x0(0) Next 0x0(0)/0x0(0)
+    Last retransmission scan length is 0, maximum is 0
+    Last retransmission scan time is 0 msec, maximum is 0 msec
+ Neighbor 192.168.10.5, interface address 192.168.10.1
+    In the area 0 via interface Serial0/0/0
+    Neighbor priority is 0, State is FULL, 6 state changes
+    DR is 0.0.0.0 BDR is 0.0.0.0
+    Options is 0x12 in Hello (E-bit, L-bit)
+    Options is 0x52 in DBD (E-bit, L-bit, O-bit)
+    LLS Options is 0x1 (LR)
+    Dead timer due in 00:00:35
+    Neighbor is up for 00:05:48
+    Index 1/1, retransmission queue length 0, number of retransmission 0
+    First 0x0(0)/0x0(0) Next 0x0(0)/0x0(0)
+    Last retransmission scan length is 0, maximum is 0
+    Last retransmission scan time is 0 msec, maximum is 0 msec
+
+R2#show ip ospf
+ Routing Process "ospf 1" with ID 192.168.10.9
+ Start time: 00:19:23.544, Time elapsed: 00:07:51.336
+ Supports only single TOS(TOS0) routes
+ Supports opaque LSA
+ Supports Link-local Signaling (LLS)
+ Supports area transit capability
+ Supports NSSA (compatible with RFC 3101)
+ Event-log enabled, Maximum number of events: 1000, Mode: cyclic
+ Router is not originating router-LSAs with maximum metric
+ Initial SPF schedule delay 5000 msecs
+ Minimum hold time between two consecutive SPFs 10000 msecs
+ Maximum wait time between two consecutive SPFs 10000 msecs
+ Incremental-SPF disabled
+ Minimum LSA interval 5 secs
+ Minimum LSA arrival 1000 msecs
+ LSA group pacing timer 240 secs
+ Interface flood pacing timer 33 msecs
+ Retransmission pacing timer 66 msecs
+ Number of external LSA 0. Checksum Sum 0x000000
+ Number of opaque AS LSA 0. Checksum Sum 0x000000
+ Number of DCbitless external and opaque AS LSA 0
+ Number of DoNotAge external and opaque AS LSA 0
+ Number of areas in this router is 1. 1 normal 0 stub 0 nssa
+ Number of areas transit capable is 0
+ External flood list length 0
+ IETF NSF helper support enabled
+ Cisco NSF helper support enabled
+ Reference bandwidth unit is 100 mbps
+    Area BACKBONE(0)
+        Number of interfaces in this area is 3
+        Area has no authentication
+        SPF algorithm last executed 00:04:18.760 ago
+        SPF algorithm executed 6 times
+        Area ranges are
+        Number of LSA 3. Checksum Sum 0x0127AE
+        Number of opaque link LSA 0. Checksum Sum 0x000000
+        Number of DCbitless LSA 0
+        Number of indication LSA 0
+        Number of DoNotAge LSA 0
+        Flood list length 0
+
+
+
+8C
+Serial0/0/0 is up, line protocol is up
+  Internet Address 192.168.10.2/30, Area 0, Attached via Network Statement
+  Process ID 1, Router ID 192.168.10.9, Network Type POINT_TO_POINT, Cost: 1562
+  Topology-MTID    Cost    Disabled    Shutdown      Topology Name
+        0           1562      no          no            Base
+  Transmit Delay is 1 sec, State POINT_TO_POINT
+.
+  Timer intervals configured, Hello 5, Dead 20, Wait 20, Retransmit 5
+. 
+   oob-resync timeout 40
+    Hello due in 00:00:04
+  Supports Link-local Signaling (LLS)
+  Cisco NSF helper support enabled
+  IETF NSF helper support enabled
+  Index 2/2, flood queue length 0
+  Next 0x0(0)/0x0(0)
+  Last flood scan length is 1, maximum is 1
+  Last flood scan time is 0 msec, maximum is 0 msec
+  Neighbor Count is 1, Adjacent neighbor count is 1
+    Adjacent with neighbor 192.168.10.5
+  Suppress hello for 0 neighbor(s)
+
+. Zerwana
+*Nov 26 16:38:49.011: %OSPF-5-ADJCHG: Process 1, Nbr 192.168.10.5 on Serial0/0/0 from FULL to DOWN, Neighbor Down: Dead timer expired
+Neighbor ID     Pri   State           Dead Time   Address         Interface
+192.168.10.6      0   FULL/  -        00:00:37    192.168.10.10   Serial0/0/1
+
+
+. Przywrócona
+*Nov 26 16:39:24.851: %OSPF-5-ADJCHG: Process 1, Nbr 192.168.10.5 on Serial0/0/0 from LOADING to FULL, Loading Done
+.
+R2#show ip ospf neighbor
+
+Neighbor ID     Pri   State           Dead Time   Address         Interface
+192.168.10.6      0   FULL/  -        00:00:33    192.168.10.10   Serial0/0/1
+192.168.10.5      0   FULL/  -        00:00:15    192.168.10.1    Serial0/0/0

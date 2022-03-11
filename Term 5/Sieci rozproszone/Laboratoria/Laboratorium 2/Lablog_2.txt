@@ -1,0 +1,145 @@
+## Sieci Rozproszone 2
+
+*Oct 15 14:12:57.251: %LINK-3-UPDOWN: Interface GigabitEthernet0/0, changed state to up
+*Oct 15 14:12:57.251: is_up: GigabitEthernet0/0 0 state: 4 sub state: 1 line: 1
+*Oct 15 14:12:58.251: %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0, changed state to up
+*Oct 15 14:12:58.251: is_up: GigabitEthernet0/0 1 state: 4 sub state: 1 line: 1
+*Oct 15 14:12:58.251: RT: updating connected 172.16.3.0/24 (0x0):
+    via 0.0.0.0 Gi0/0
+*Oct 15 14:12:58.251: RT: add 172.16.3.0/24 via 0.0.0.0, connected metric [0/0]
+*Oct 15 14:12:58.251: RT: interface GigabitEthernet0/0 added to routing table
+*Oct 15 14:12:58.251: RT: updating connected 172.16.3.1/32 (0x0):
+    via 0.0.0.0 Gi0/0
+
+*Oct 15 14:12:58.251: RT: network 172.16.0.0 is now variably masked
+*Oct 15 14:12:58.251: RT: add 172.16.3.1/32 via 0.0.0.0, connected metric [0/0]
+
+
+R1# show ip route
+
+jak michał połączył nas
+
+*Oct 15 14:29:37.727: %LINK-3-UPDOWN: Interface Serial0/0/0, changed state to up
+R1#
+*Oct 15 14:29:37.727: is_up: Serial0/0/0 0 state: 4 sub state: 1 line: 0
+*Oct 15 14:29:37.727: is_up: Serial0/0/0 0 state: 4 sub state: 1 line: 0
+*Oct 15 14:29:38.727: %LINEPROTO-5-UPDOWN: Line protocol on Interface Serial0/0/0, changed state to up
+*Oct 15 14:29:38.727: is_up: Serial0/0/0 1 state: 4 sub state: 1 line: 0
+*Oct 15 14:29:38.727: RT: updating connected 172.16.2.0/24 (0x0):
+    via 0.0.0.0 Se0/0/0
+
+*Oct 15 14:29:38.727: RT: add 172.16.2.0/24 via 0.0.0.0, connected metric [0/0]
+*Oct 15
+R1# 14:29:38.727: RT: interface Serial0/0/0 added to routing table
+*Oct 15 14:29:38.727: RT: updating connected 172.16.2.1/32 (0x0):
+    via 0.0.0.0 Se0/0/0
+
+Ile interfejsów jest aktywnych na routerach R1 i R3? : 2
+
+R1 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+      172.16.0.0/16 is variably subnetted, 4 subnets, 2 masks
+C        172.16.2.0/24 is directly connected, Serial0/0/0
+L        172.16.2.1/32 is directly connected, Serial0/0/0
+C        172.16.3.0/24 is directly connected, GigabitEthernet0/0
+L        172.16.3.1/32 is directly connected, GigabitEthernet0/0
+
+
+!
+! Last configuration change at 14:27:21 UTC Tue Oct 15 2019
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname R1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+!
+no aaa new-model
+!
+ip cef
+!
+!
+!
+!
+!
+!
+no ipv6 cef
+multilink bundle-name authenticated
+!
+!
+!
+!
+license udi pid CISCO2911/K9 sn FCZ173160A1
+!
+!
+!
+!
+!
+!
+!
+!
+interface Embedded-Service-Engine0/0
+ no ip address
+ shutdown
+!
+interface GigabitEthernet0/0
+ ip address 172.16.3.1 255.255.255.0
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/1
+ no ip address
+ shutdown
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/2
+ no ip address
+ shutdown
+ duplex auto
+ speed auto
+!
+interface Serial0/0/0
+ ip address 172.16.2.1 255.255.255.0
+ clock rate 64000
+!
+interface Serial0/0/1
+ no ip address
+ shutdown
+ clock rate 2000000
+!
+ip forward-protocol nd
+!
+no ip http server
+no ip http secure-server
+!
+!
+!
+!
+!
+control-plane
+!
+!
+!
+line con 0
+ exec-timeout 0 0
+ logging synchronous
+line aux 0
+line 2
+ no activation-character
+ no exec
+ transport preferred none
+ transport input all
+ transport output pad telnet rlogin lapb-ta mop udptn v120 ssh
+ stopbits 1
+line vty 0 4
+ login
+ transport input all
+!
+scheduler allocate 20000 1000
+!
+end

@@ -1,0 +1,27 @@
+protokó³ OSPF:
+- dla wiêkszych sieci, dla których RIP nie wystarcza
+- wg stanu ³¹cza zamiast wektora odleg³oœci
+- baza danych zawieraj¹ca informacje o topologii
+- zbiera informacje o trasach od routerów, oblicza najlepsz¹ trasê do ka¿dego miejsca docelowego
+- w³asny obraz sieci ka¿dego z routerów
+
+- obszary numerowane 0-65535
+- ka¿dy obszar po³¹czony z obszarem szkieletowym (0)
+
+- szybko reaguje na zmiany w sieci
+- wysy³a aktualizacje wyzwalane jedynie po wyst¹pieniu zmian w sieci
+- cyklicznie wysy³a aktualizacje 
+- u¿ywa mechanizmu hello do okreœlania dostêpnoœci s¹siadów
+
+- router rozg³asza pakiety hello - œledzenie stanu s¹siednich routerów
+- og³oszenia LSA (link-state advertisement) - œledzenie stanu wszystkich routerów w obszarze
+
+- odwrotne maski (255.255.255.255 - maska)
+
+network adres maska odwrotna area id_obszaru
+
+- adres pseudosieci loopback - stabilnoœæ dzia³ania protoko³u
+
+- koszt - odwrotnoœæ przepustowoœci
+
+- 4 próby wys³ania pakietu hello - uznanie za wy³¹czony (domyœlnie)

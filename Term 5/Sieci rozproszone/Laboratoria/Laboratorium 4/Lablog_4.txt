@@ -1,0 +1,376 @@
+
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#ip dhcp excluded-ad
+Router(config)#ip dhcp excluded-address 192.168.10.1 192.168.10.10
+Router(config)#ip dhcp excluded-address 192.168.11.1 192.168.11.10
+
+
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#ip dhcp pool R1Ge0
+Router(dhcp-config)#network 192.168.10.0 255.255.255.0
+Router(dhcp-config)#dns-server 192.168.11.5
+Router(dhcp-config)#default-router 192.168.10.1
+Router(dhcp-config)#exit
+Router(config)#ip dhcp pool R1Ge1
+Router(dhcp-config)#network 192.168.11.0 255.255.255.0
+Router(dhcp-config)#dns-server 192.168.11.5
+Router(dhcp-config)#default-router 192.168.11.1
+Router(dhcp-config)#exit
+Router(config)#
+
+Konfiguracja IP systemu Windows
+
+Wystąpił błąd podczas zwalniania interfejsu Loopback Pseudo-Interface 1 : Nie 
+
+można odnaleźć określonego pliku.
+
+
+Karta Ethernet LAN:
+
+   Sufiks DNS konkretnego połączenia :
+   Adres IPv6. . . . . . . . . . . . : 2001:db8:acad:a::3
+   Adres IPv6 połączenia lokalnego . : fe80::a1fb:fd2d:942a:38af%11
+   Brama domyślna. . . . . . . . . . :
+
+Karta tunelowa isatap.{160D234C-3793-457A-8EDD-E2E5639CE6A0}:
+
+   Stan nośnika . . . .  . . . . . . .: Nośnik odłączony
+   Sufiks DNS konkretnego połączenia :
+
+
+Bindings from all pools not associated with VRF:
+IP address          Client-ID/              Lease expiration        Type
+                    Hardware address/
+                    User name
+192.168.10.11       0063.6973.636f.2d64.    Feb 21 2017 02:07 PM    Automatic
+                    3063.372e.3839.6532.
+                    2e34.3434.302d.566c.
+                    31
+192.168.10.13       0100.2618.8ba3.36       Feb 21 2017 02:12 PM    Automatic
+192.168.11.11       0063.6973.636f.2d64.    Feb 21 2017 02:07 PM    Automatic
+                    3063.372e.3839.6532.
+                    2e33.3034.302d.566c.
+                    31
+192.168.11.12       0100.2618.8ba2.43       Feb 21 2017 02:12 PM    Automatic
+
+
+
+Pool R1Ge0 :
+ Utilization mark (high/low)    : 100 / 0
+ Subnet size (first/next)       : 0 / 0
+ Total addresses                : 254
+ Leased addresses               : 1
+ Pending event                  : none
+ 1 subnet is currently in the pool :
+ Current index        IP address range                    Leased addresses
+ 192.168.10.14        192.168.10.1     - 192.168.10.254    1
+
+Pool R1Ge1 :
+ Utilization mark (high/low)    : 100 / 0
+ Subnet size (first/next)       : 0 / 0
+ Total addresses                : 254
+ Leased addresses               : 2
+ Pending event                  : none
+ 1 subnet is currently in the pool :
+ Current index        IP address range                    Leased addresses
+ 192.168.11.13        192.168.11.1     - 192.168.11.254    2
+
+
+Router#debug ip dhcp server events
+DHCP server event debugging is on.
+Router#debug ip dhcp server events
+DHCP server event debugging is on.
+*Feb 20 14:16:49.259: DHCPD: checking for expired leases.
+
+Router#show ip dhcp server statistics
+Memory usage         75320
+Address pools        2
+Database agents      0
+Automatic bindings   3
+Manual bindings      0
+Expired bindings     0
+Malformed messages   0
+Secure arp entries   0
+
+Message              Received
+BOOTREQUEST          0
+DHCPDISCOVER         16
+DHCPREQUEST          8
+DHCPDECLINE          0
+DHCPRELEASE          3
+DHCPINFORM           6
+
+Message              Sent
+BOOTREPLY            0
+DHCPOFFER            6
+DHCPACK              14
+DHCPNAK              0
+
+
+
+*Feb 20 14:18:49.259: DHCPD: checking for expired leases.
+*Feb 20 14:19:03.655: DHCPD: Sending notification of ASSIGNMENT:
+*Feb 20 14:19:03.655:  DHCPD: address 192.168.11.12 mask 255.255.255.0
+*Feb 20 14:19:03.655:   DHCPD: htype 1 chaddr 0026.188b.a243
+*Feb 20 14:19:03.655:   DHCPD: lease time remaining (secs) = 86400
+*Feb 20 14:19:25.647: DHCPD: Sending notification of DISCOVER:
+*Feb 20 14:19:25.647:   DHCPD: htype 1 chaddr 0026.188b.a336
+*Feb 20 14:19:25.647:   DHCPD: remote id 020a0000c0a80a0100000000
+*Feb 20 14:19:25.647:   DHCPD: circuit id 00000000
+*Feb 20 14:19:25.647: DHCPD: Seeing if there is an internally specified pool 
+
+class:
+*Feb 20 14:19:25.647:   DHCPD: htype 1 chaddr 0026.188b.a336
+*Feb 20 14:19:25.647:   DHCPD: remote id 020a0000c0a80a0100000000
+*Feb 20 14:19:25.647:   DHCPD: circuit id 00000000
+*Feb 20 14:19:25.647: DHCPD: Allocated binding 21A4F9C8
+*Feb 20 14:19:25.647: DHCPD: Adding binding to radix tree (192.168.10.14)
+*Feb 20 14:19:25.647: DHCPD: Adding binding to hash tree
+*Feb 20 14:19:25.647: DHCPD: assigned IP address 192.168.10.14 to client 
+
+0100.2618.8ba3.36.
+*Feb 20 14:19:27.647: DHCPD: Sending notification of DISCOVER:
+*Feb 20 14:19:27.647:   DHCPD: htype 1 chaddr 0026.188b.a336
+*Feb 20 14:19:27.647:   DHCPD: remote id 020a0000c0a80a0100000000
+*Feb 20 14:19:27.647:   DHCPD: circuit id 00000000
+*Feb 20 14:19:27.647: DHCPD: Seeing if there is an internally specified pool 
+
+class:
+*Feb 20 14:19:27.647:   DHCPD: htype 1 chaddr 0026.188b.a336
+*Feb 20 14:19:27.647:   DHCPD: remote id 020a0000c0a80a0100000000
+*Feb 20 14:19:27.647:   DHCPD: circuit id 00000000
+*Feb 20 14:19:27.647: DHCPD: Sending notification of ASSIGNMENT:
+*Feb 20 14:19:27.647:  DHCPD: address 192.168.10.14 mask 255.255.255.0
+*Feb 20 14:19:27.647:   DHCPD: htype 1 chaddr 0026.188b.a336
+*Feb 20 14:19:27.647:   DHCPD: lease time remaining (secs) = 86400
+
+
+
+*Feb 20 14:20:49.259: DHCPD: checking for expired leases.
+Router(config-if)#ipv6 address 2001:db8:acad:a::1/64
+Router(config-if)#no shut
+Router(config-if)#exit
+Router(config)#ipv6 address 2001:db8:acad:1::1/64
+                     ^
+% Invalid input detected at '^' marker.
+
+Router(config)#int G0/1
+Router(config-if)#ipv6 address 2001:db8:acad:1::1/64
+Router(config-if)#no shut
+Router(config-if)#exit
+
+
+Router#show ipv6 int brief
+Em0/0                  [administratively down/down]
+    unassigned
+GigabitEthernet0/0     [up/up]
+    FE80::FA72:EAFF:FE91:F520
+    2001:DB8:ACAD:A::1
+GigabitEthernet0/1     [up/up]
+    FE80::FA72:EAFF:FE91:F521
+    2001:DB8:ACAD:1::1
+GigabitEthernet0/2     [administratively down/down]
+    unassigned
+Serial0/0/0            [administratively down/down]
+    unassigned
+Serial0/0/1            [administratively down/down]
+    unassigned
+
+
+Router#
+*Feb 20 14:24:37.527: DHCPD: Sending notification of ASSIGNMENT:
+*Feb 20 14:24:37.527:  DHCPD: address 192.168.11.12 mask 255.255.255.0
+*Feb 20 14:24:37.527:   DHCPD: htype 1 chaddr 0026.188b.a243
+*Feb 20 14:24:37.527:   DHCPD: lease time remaining (secs) = 86400
+*Feb 20 14:24:49.259: DHCPD: checking for expired leases.
+
+
+GigabitEthernet0/0 is up, line protocol is up
+  IPv6 is enabled, link-local address is FE80::FA72:EAFF:FE91:F520
+  No Virtual link-local address(es):
+  Global unicast address(es):
+    2001:DB8:ACAD:A::1, subnet is 2001:DB8:ACAD:A::/64
+  Joined group address(es):
+    FF02::1
+    FF02::1:FF00:1
+    FF02::1:FF91:F520
+  MTU is 1500 bytes
+  ICMP error messages limited to one every 100 milliseconds
+  ICMP redirects are enabled
+  ICMP unreachables are sent
+  ND DAD is enabled, number of DAD attempts: 1
+  ND reachable time is 30000 milliseconds (using 30000)
+  ND NS retransmit interval is 1000 milliseconds
+
+
+GigabitEthernet0/1 is up, line protocol is up
+  IPv6 is enabled, link-local address is FE80::FA72:EAFF:FE91:F521
+  No Virtual link-local address(es):
+  Global unicast address(es):
+    2001:DB8:ACAD:1::1, subnet is 2001:DB8:ACAD:1::/64
+  Joined group address(es):
+    FF02::1
+    FF02::1:FF00:1
+    FF02::1:FF91:F521
+  MTU is 1500 bytes
+  ICMP error messages limited to one every 100 milliseconds
+  ICMP redirects are enabled
+  ICMP unreachables are sent
+  ND DAD is enabled, number of DAD attempts: 1
+  ND reachable time is 30000 milliseconds (using 30000)
+  ND NS retransmit interval is 1000 milliseconds
+Router#
+
+
+Router(config)#int g0/0
+Router(config-if)#ipv6 address fe80::1 link-local
+Router(config-if)#int g0/1
+Router(config-if)#ipv6 address fe80::1 link-local
+Router(config-if)#exit
+Router(config)#end
+Router#
+*Feb 20 14:26:14.491: %SYS-5-CONFIG_I: Configured from console by console
+
+GigabitEthernet0/0 is up, line protocol is up
+  IPv6 is enabled, link-local address is FE80::1
+  No Virtual link-local address(es):
+  Global unicast address(es):
+    2001:DB8:ACAD:A::1, subnet is 2001:DB8:ACAD:A::/64
+  Joined group address(es):
+    FF02::1
+    FF02::1:FF00:1
+  MTU is 1500 bytes
+  ICMP error messages limited to one every 100 milliseconds
+  ICMP redirects are enabled
+  ICMP unreachables are sent
+  ND DAD is enabled, number of DAD attempts: 1
+  ND reachable time is 30000 milliseconds (using 30000)
+  ND NS retransmit interval is 1000 milliseconds
+GigabitEthernet0/1 is up, line protocol is up
+  IPv6 is enabled, link-local address is FE80::1
+  No Virtual link-local address(es):
+  Global unicast address(es):
+    2001:DB8:ACAD:1::1, subnet is 2001:DB8:ACAD:1::/64
+  Joined group address(es):
+    FF02::1
+    FF02::1:FF00:1
+  MTU is 1500 bytes
+  ICMP error messages limited to one every 100 milliseconds
+  ICMP redirects are enabled
+  ICMP unreachables are sent
+  ND DAD is enabled, number of DAD attempts: 1
+  ND reachable time is 30000 milliseconds (using 30000)
+  ND NS retransmit interval is 1000 milliseconds
+
+
+
+
+
+
+
+                                                                            
+
+Karta Ethernet LAN:                                                            
+
+                                                                            
+
+Sufiks DNS konkretnego połączenia :                                         
+
+Adres IPv6. . . . . . . . . . . . : 2001:db8:acad:a::3                      
+
+Adres IPv6 połączenia lokalnego . : fe80::a1fb:fd2d:942a:38af%11            
+
+Adres IPv4. . . . . . . . . . . . . : 192.168.10.14                         
+
+Maska podsieci. . . . . . . . . . : 255.255.255.0                           
+
+Brama domyślna. . . . . . . . . . : fe80::1%11                                 
+
+                                 192.168.10.1                                  
+
+                                                                   Karta 
+
+tunelowa isatap.{160D234C-3793-457A-8EDD-E2E5639CE6A0}:                        
+
+                                                                      Stan 
+
+nośnika . . . .  . . . . . . .: Nośnik odłączony                       Sufiks 
+
+DNS konkretnego połączenia :                                                   
+
+                                                               
+
+
+
+
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#ipv6 unicast-routing
+Router(config)#exit
+
+
+
+
+
+GigabitEthernet0/0 is up, line protocol is up
+  IPv6 is enabled, link-local address is FE80::1
+  No Virtual link-local address(es):
+  Global unicast address(es):
+    2001:DB8:ACAD:A::1, subnet is 2001:DB8:ACAD:A::/64
+  Joined group address(es):
+    FF02::1
+    FF02::2
+    FF02::1:FF00:1
+  MTU is 1500 bytes
+  ICMP error messages limited to one every 100 milliseconds
+  ICMP redirects are enabled
+  ICMP unreachables are sent
+  ND DAD is enabled, number of DAD attempts: 1
+  ND reachable time is 30000 milliseconds (using 30000)
+  ND advertised reachable time is 0 (unspecified)
+  ND advertised retransmit interval is 0 (unspecified)
+  ND router advertisements are sent every 200 seconds
+  ND router advertisements live for 1800 seconds
+  ND advertised default router preference is Medium
+  Hosts use stateless autoconfig for addresses.
+GigabitEthernet0/1 is up, line protocol is up
+  IPv6 is enabled, link-local address is FE80::1
+  No Virtual link-local address(es):
+  Global unicast address(es):
+    2001:DB8:ACAD:1::1, subnet is 2001:DB8:ACAD:1::/64
+  Joined group address(es):
+    FF02::1
+    FF02::2
+    FF02::1:FF00:1
+  MTU is 1500 bytes
+  ICMP error messages limited to one every 100 milliseconds
+  ICMP redirects are enabled
+  ICMP unreachables are sent
+  ND DAD is enabled, number of DAD attempts: 1
+  ND reachable time is 30000 milliseconds (using 30000)
+  ND advertised reachable time is 0 (unspecified)
+  ND advertised retransmit interval is 0 (unspecified)
+  ND router advertisements are sent every 200 seconds
+  ND router advertisements live for 1800 seconds
+  ND advertised default router preference is Medium
+  Hosts use stateless autoconfig for addresses.
+
+
+
+
+
+Karta Ethernet LAN:
+
+   Sufiks DNS konkretnego połączenia :
+   Adres IPv6. . . . . . . . . . . . : 2001:db8:acad:a::3
+   Adres IPv6. . . . . . . . . . . . : 2001:db8:acad:a:a1fb:fd2d:942a:38af
+   Tymczasowy adres IPv6 . . . . . . : 2001:db8:acad:a:6410:791:b37e:11b6
+   Adres IPv6 połączenia lokalnego . : fe80::a1fb:fd2d:942a:38af%11
+   Adres IPv4. . . . . . . . . . . . . : 192.168.10.14
+   Maska podsieci. . . . . . . . . . : 255.255.255.0
+   Brama domyślna. . . . . . . . . . : fe80::1%11
+                                       192.168.10.1
+
+Karta tunelowa isatap.{160D234C-3793-457A-8EDD-E2E5639CE6A0}:
+
+   Stan nośnika . . . .  . . . . . . .: Nośnik odłączony
+   Sufiks DNS konkretnego połączenia :
