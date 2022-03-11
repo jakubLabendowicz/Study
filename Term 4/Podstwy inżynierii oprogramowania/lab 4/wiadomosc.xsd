@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="wiadomosc">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="temat" type="xs:string" />
+        <xs:element name="adesat" type="xs:string" />
+        <xs:element name="tresc" type="xs:string" />
+      </xs:sequence>
+      <xs:attribute name="nadawca" type="xs:string" use="required" />
+      <xs:attribute name="dataInicjalizacji" type="xs:string" use="required" />
+      <xs:attribute name="godzinaInicjalizacji" type="xs:string" use="required" />
+      <xs:attribute name="dataWyslania" type="xs:string" use="required" />
+      <xs:attribute name="godzinaWyslania" type="xs:string" use="required" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

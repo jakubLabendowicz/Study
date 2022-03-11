@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zwrot>
+    <dane-osobowe>
+        <imie-i-nazwisko>Jan Kowalski</imie-i-nazwisko>
+        <adres>Nadbystrzycka 48A Lublin</adres>
+        <email>jkowalski@gmail.com</email>
+        <telefon-kontaktowy>123456789</telefon-kontaktowy>
+    </dane-osobowe>
+    <zwracany-towar>
+        <numer-dokumentu-zakupu>546235</numer-dokumentu-zakupu>
+        <nazwa-towaru>
+            <towar>
+                <nazwa>Koszulka</nazwa>
+                <ilosc>1</ilosc>
+                <cena>72</cena>
+            </towar>
+            <towar>
+                <nazwa>Spodnie</nazwa>
+                <ilosc>2</ilosc>
+                <cena>129</cena>
+            </towar>
+            <towar>
+                <nazwa>Skarpetki</nazwa>
+                <ilosc>3</ilosc>
+                <cena>39</cena>
+            </towar>
+            <towar>
+                <nazwa>Czapka</nazwa>
+                <ilosc>1</ilosc>
+                <cena>56</cena>
+            </towar>
+            <towar>
+                <nazwa>Koszula</nazwa>
+                <ilosc>1</ilosc>
+                <cena>78</cena>
+            </towar>
+        </nazwa-towaru>
+        <powod-nr>2</powod-nr>
+        <inny-powod-zwrotu number="6"></inny-powod-zwrotu>
+        <wartosc-zwracanego-towaru>374</wartosc-zwracanego-towaru>
+        <data-zakupu>28.03.2021</data-zakupu>
+        <podpis>podpis1.png</podpis>
+    </zwracany-towar>
+    <dane-potrzebne-do-zwrotu-srodkow>
+        <numer-rachunku-bankowego>685764853579453753</numer-rachunku-bankowego>
+        <imie-i-nazwisko>Jan Kowalski</imie-i-nazwisko>
+        <adres>Nadbystrzycka 48A Lublin</adres>
+        <data>08.04.2021</data>
+        <podpis>podpis2.png</podpis>
+    </dane-potrzebne-do-zwrotu-srodkow>
+</zwrot>

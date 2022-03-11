@@ -1,0 +1,20 @@
+Wypisz, co składa się na szatę graficzną.
+
+>imie i nazwisko
+>adres
+>e-mail
+
+>telefon kontaktowy
+>numer dokumentu zakupu
+>towary: [nazwa, ilosc, cena]
+>numer powodu zwrotu
+>inny powód zwrotu
+>wartosc zwracanego towaru
+>data zakupu
+>podpis
+
+>numer rachunku bankowego
+>imię i nazwisko
+>adres
+>data
+>podpis

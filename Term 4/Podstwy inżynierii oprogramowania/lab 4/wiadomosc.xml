@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wiadomosc nadawca="Jan Kowalski" dataInicjalizacji="01.03.2021" godzinaInicjalizacji="17:31" dataWyslania="02.03.2021" godzinaWyslania="16:14">
+    <temat>Przykłdaowy temat</temat>
+    <adesat>Marian Nowak</adesat>
+    <tresc>
+    Widomosc
+    </tresc>
+</wiadomosc>
