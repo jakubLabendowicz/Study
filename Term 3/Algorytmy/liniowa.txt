@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+
+
+float liniowa(int *x, int *y, int n){
+    float xsum=0,x2sum=0,ysum=0,xysum=0;
+    for (int i=0;i<n;i++){
+        xsum=xsum+x[i];                        // sigma(xi)
+        ysum=ysum+y[i];                        // sigma(yi)
+        x2sum=x2sum+(x[i]*x[i]);               // sigma(x^2)
+        xysum=xysum+x[i]*y[i];                 // sigma(xi*yi)
+    }
+    return (n*xysum-xsum*ysum)/(n*x2sum-xsum*xsum);
+}
+
+int main(){
+    int n;
+    cout<<"Podaj ilosc wezlow: "; cin>>n;
+    int *x = new int[n];
+    int *y = new int[n];
+
+    for (int i=0; i<n; i++){
+        cout<<" x["<<i<<"] = "; cin>>x[i];
+        cout<<" f["<<x[i]<<"] = "; cin>>y[i];
+    }
+    float a = liniowa(x,y,n);
+    cout<<"\n  wspolczynnik aproksymacji a : \n"<<a<<endl;
+
+    delete [] x;
+    delete [] y;
+    return 0;
+}

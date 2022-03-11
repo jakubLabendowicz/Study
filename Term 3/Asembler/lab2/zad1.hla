@@ -1,0 +1,21 @@
+program zad1;
+#include ("stdlib.hhf");
+static
+	zmienna1: int8 := -7;
+	zmienna2: int16 := -277;
+	zmienna3: int32 := -66000;
+begin zad1;
+	stdout.put("Poczatkowe wartosci zmienna1: ", zmienna1, " zmienna2: ", zmienna2, " zmienna3: ", zmienna3, nl);
+	mov(zmienna1, al);
+	sub(al, zmienna1);
+	sub(al, zmienna1);
+	mov(zmienna2, ax);
+	sub(ax, zmienna2);
+	sub(ax, zmienna2);
+	mov(zmienna3, eax);
+	sub(eax, zmienna3);
+	sub(eax, zmienna3);
+	stdout.put("Po zanegowaniu zmienna1: ", zmienna1, " zmienna2: ", zmienna2, " zmienna3: ", zmienna3, nl);
+	add(666, zmienna3);
+	stdout.put("Wartosc zmienna3 po dodaniu 666: ", zmienna3, nl);
+end zad1;

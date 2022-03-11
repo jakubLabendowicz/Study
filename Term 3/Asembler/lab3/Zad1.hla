@@ -1,0 +1,11 @@
+program Zad1;
+#include("stdlib.hhf");
+static
+zmienna: int8;
+begin Zad1;
+stdout.put("Wprowadz wartość do rejestru AL  ");
+stdin.get(al);
+mov(al,zmienna);
+stdout.put("AL: ",al," int8: ",zmienna);
+
+end Zad1;

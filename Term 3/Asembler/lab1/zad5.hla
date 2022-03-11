@@ -1,0 +1,16 @@
+program movaddsub;
+#include("stdlib.hhf");
+    static 
+    a: int8 :=-7;
+    b: int8 :=6;
+    roznica: int8 :=0;
+begin movaddsub;
+
+    stdout.put("a: ",a,"  b: ",b,nl);
+    mov(a,al);
+    sub(al, b);
+    stdout.put("a: ",a,"  b: ",b,nl);
+    add(12,b);
+    stdout.put("  b: ",b,nl);
+
+end movaddsub;

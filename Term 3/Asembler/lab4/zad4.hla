@@ -1,0 +1,16 @@
+program Zad4;
+
+#include ("stdlib.hhf");
+static
+zmienna: int8 := -1;
+
+begin Zad4;
+	stdout.put("podaj wartosc wieksza od 0");
+	stdin.geth8();
+	
+	ForEver
+		add(1,zmienna);
+		stdout.put("Odliczanie do ",al," : ",zmienna,nl);
+		breakif(zmienna==al);
+	endfor;
+end Zad4;

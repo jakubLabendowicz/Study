@@ -1,0 +1,10 @@
+program zad2;
+#include ("stdlib.hhf");
+static
+	zmienna: int8 := 1;
+begin zad2;
+	while(zmienna <=10) do
+	stdout.put(zmienna:10);
+	inc(zmienna);
+	endwhile;
+end zad2;

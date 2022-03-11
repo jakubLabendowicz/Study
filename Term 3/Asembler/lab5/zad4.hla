@@ -1,0 +1,14 @@
+program Zad4;
+
+#include("stdlib.hhf")
+
+begin Zad4;
+	stdout.put("Wprowadz tekst ",nl);
+	stdin.flushInput();
+	
+	repeat
+		stdin.getc();
+		stdout.putc(AL);
+		stdout.put( "=",AL,nl);
+	until(stdin.eoln());
+end Zad4;

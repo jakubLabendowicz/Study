@@ -1,0 +1,36 @@
+program Zad1;
+
+#include("stdlib.hhf");
+
+static
+    zmienna1: real32:=-4.87660e-2;
+    zmienna2: real32:=562.3456e1;
+    zmienna3: real32:=3.14e-15;
+	
+begin Zad1;
+	stdout.put(nl);
+	stdout.putr32(zmienna1,10,5,'');
+	stdout.put(nl);
+	stdout.pute32(zmienna1,10);
+	stdout.put(nl);
+	stdout.put(zmienna1, nl);
+	stdout.put(zmienna1:10:3);
+	
+	
+	stdout.put(nl);
+	stdout.putr32(zmienna2,10,3,'');
+	stdout.put(nl);
+	stdout.pute32(zmienna2,10);
+	stdout.put(nl);
+	stdout.put(zmienna2, nl);
+	stdout.put(zmienna2:10:3);
+	
+	
+	stdout.put(nl);
+	stdout.putr32(zmienna3,10,5,'*');
+	stdout.put(nl);
+	stdout.pute32(zmienna3,10);
+	stdout.put(nl);
+	stdout.put(zmienna3, nl);
+	stdout.put(zmienna3:10:3);
+end Zad1;

@@ -1,0 +1,13 @@
+program Zad3;
+#include("stdlib.hhf");
+static
+
+begin Zad3;
+stdout.put("Wprowadz liczbe w systemie 16:  ");
+stdin.get(ax);
+
+stdout.put("Liczba w hex : ",ax);
+stdout.newln();
+stdout.puti16(ax);
+
+end Zad3;

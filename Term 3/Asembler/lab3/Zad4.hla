@@ -1,0 +1,15 @@
+program Zadanie14;
+
+#include ("stdlib.hhf");
+static
+zmienna: int32;
+
+begin Zadanie14;
+stdout.put("Wprowadz wartosc do rejetru eax: ");
+stdin.geth32();
+stdout.newln();
+mov(eax,zmienna);
+stdout.put(zmienna,"   liczba wynosi: ");
+stdout.puth32(zmienna);
+
+end Zadanie14;

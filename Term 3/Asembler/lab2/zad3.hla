@@ -1,0 +1,16 @@
+program zad3;
+#include ("stdlib.hhf");
+static
+	a: int8 := 1;
+	liczba: int8 := 40;
+	i: int8;
+begin zad3;
+	while(a <= 8) do
+		for(mov(0, i); i < 5; inc(i)) do
+			stdout.put(liczba:3);
+			dec(liczba);
+		endfor;
+		stdout.newln();
+		inc(a);
+	endwhile;
+end zad3;

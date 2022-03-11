@@ -1,0 +1,11 @@
+program trzeci;
+    #include("stdlib.hhf");
+    static 
+    falszlogiczny:  boolean :=false;
+    prawdalogiczna: boolean :=true;
+begin trzeci;
+
+
+
+    stdout.put("Falsz: ",falszlogiczny,nl,"Prawda : ",prawdalogiczna);
+end trzeci;

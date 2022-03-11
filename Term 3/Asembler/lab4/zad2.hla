@@ -1,0 +1,13 @@
+program Zad2;
+
+#include ("stdlib.hhf");
+
+begin Zad2;
+	stdout.put("podaj wartosc");
+	stdin.geth8();
+	stdout.put(al,"    ");
+	CBW;
+	stdout.put(ax,"    ");
+	CWD;
+	stdout.put(eax,"    ");
+end Zad2;

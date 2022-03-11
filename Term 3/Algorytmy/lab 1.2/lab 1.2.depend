@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1601893722 source:c:\users\michax\desktop\politechnika\algorytmy numeryczne\lab 1.2\main.cpp
+	<iostream>
+	<math.h>
+

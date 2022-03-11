@@ -1,0 +1,13 @@
+program czwarty;
+    #include("stdlib.hhf");
+    static 
+    znak1:  char;
+    znak2: char :='@';
+begin czwarty;
+
+
+
+    stdout.put("Znak zadeklarowany: ",znak2,nl);
+    stdin.get(znak1);
+    stdout.put("Znak podany : ",znak1);
+end czwarty;

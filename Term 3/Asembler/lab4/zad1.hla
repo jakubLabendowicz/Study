@@ -1,0 +1,26 @@
+program Zad1;
+
+#include ("stdlib.hhf");
+static
+zmienna: int8;
+
+begin Zad1;
+	stdout.put("podaj liczbe calkowita");
+	stdin.geth8();
+	
+	mov(ah,zmienna);
+	stdout.puth8(zmienna);
+	neg(zmienna);
+	stdout.put("    ");
+	stdout.puth8(zmienna);
+	
+	inc(zmienna);
+	stdout.put("    ");
+	stdout.puth8(zmienna);
+	
+	mov(ah,zmienna);
+	neg(zmienna);
+	inc(zmienna);
+	stdout.put("    ");
+	stdout.put(zmienna);
+end Zad1;

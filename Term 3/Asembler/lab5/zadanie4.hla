@@ -1,0 +1,20 @@
+program lab5_4;
+
+#include("stdlib.hhf")
+
+
+begin lab5_4;
+
+	stdout.put("Wprowadz wiersz tekstu ",nl);
+	stdin.flushInput();
+	
+	repeat
+		stdin.getc();
+		stdout.putc(AL);
+		stdout.put( "=",AL,nl);
+	until(stdin.eoln());
+		
+	
+	
+	
+end lab5_4;

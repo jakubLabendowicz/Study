@@ -1,0 +1,17 @@
+program Zad5;
+
+#include ("stdlib.hhf");
+
+begin Zad5;
+	try
+		stdout.put("Podaj liczbe");
+		stdin.geth8();
+		
+		exception(ex.ValueOutOfRange)
+		stdout.put("Podaj poprawna liczbe z zakresu -128 do 127");
+		stdin.geth8();
+		exception(ex.ConversionError)
+		stdout.put("Podaj liczbe z zakresu -128 do 127");
+		stdin.geth8();
+	endtry;
+end Zad5;

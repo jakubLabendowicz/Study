@@ -1,0 +1,11 @@
+program drugi;
+    #include("stdlib.hhf");
+    static 
+    zmienna1: int8 :=10;
+    zmienna2: int8 :=9;
+begin drugi;
+
+
+    stdin.get (zmienna1);
+    stdout.put("Wprowadzana watosc: ",zmienna1,nl,"zadeklarowana wartosc poczatkowa : ",zmienna2);
+end drugi;

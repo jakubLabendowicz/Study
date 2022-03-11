@@ -1,0 +1,11 @@
+program odwrotny;
+#include("stdlib.hhf");
+static
+    a: int8;
+begin odwrotny;
+    stdin.get(a);
+    mov(a,al);
+    sub(al,a);
+    sub(al,a);
+    stdout.put("a: ",a);
+end odwrotny;

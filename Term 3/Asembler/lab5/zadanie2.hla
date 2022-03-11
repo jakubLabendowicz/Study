@@ -1,0 +1,24 @@
+program lab5_2;
+
+#include("stdlib.hhf")
+
+static
+	znak : char;
+
+begin lab5_2;
+
+	stdout.put("Wprowadz duzy znak  ",nl);
+	stdin.getc();
+	mov(AL,znak);
+	
+	if(znak >='A' && znak<= 'Z')then
+		add(32,znak);
+		stdout.put("Znak maly ",znak,nl);
+	else 
+		stdout.put("Zly znak",nl);
+	endif;
+		
+	
+	
+	
+end lab5_2;

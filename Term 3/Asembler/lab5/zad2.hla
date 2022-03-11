@@ -1,0 +1,18 @@
+program Zad2;
+
+#include("stdlib.hhf")
+
+static
+	zmienna : char;
+
+begin Zad2;
+	stdout.put("Wprowadz duza litere ",nl);
+	stdin.getc();
+	mov(AL,zmienna);
+	if(zmienna >='A' && zmienna<= 'Z')then
+		add(32,zmienna);
+		stdout.put("litera mala ",zmienna,nl);
+	else 
+		stdout.put("Bledny znak",nl);
+	endif;
+end Zad2;

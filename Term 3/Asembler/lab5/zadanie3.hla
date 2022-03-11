@@ -1,0 +1,38 @@
+program lab5_3;
+
+#include("stdlib.hhf")
+
+static
+	znak : char;
+	znak1: char;
+	maska: char:=#%11111111;
+
+begin lab5_3;
+
+	stdout.put("Wprowadz duzy znak  ",nl);
+	stdin.getc();
+	mov(AL,znak);
+	mov(AL,znak1);
+	
+	if(znak >='A' && znak<= 'Z')then
+
+		xor(#%100000,znak);
+		stdout.put("Znak maly przy uzyciu XOR ",znak,nl );
+		
+		
+		mov(maska,AL);
+		and(#%11011111,AL);
+		not(AL);
+		or(znak1,AL);
+		mov(AL,znak1);
+		
+		stdout.put("Znak maly przy uzyciu AND,OR,NOT ",znak1,nl );
+		
+	else 
+		stdout.put("Zly znak",nl);
+	endif;
+		
+	
+	
+	
+end lab5_3;

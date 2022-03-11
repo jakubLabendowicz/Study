@@ -1,0 +1,11 @@
+program Zad2;
+#include("stdlib.hhf");
+static
+zmienna: int16;
+begin Zad2;
+stdout.put("Wprowadz liczbe w systemie szesnastkowym:  ");
+stdin.get(ax);
+mov(ax,zmienna);
+stdout.put("Liczba w hex : ",ax," int16: ",zmienna);
+
+end Zad2;
