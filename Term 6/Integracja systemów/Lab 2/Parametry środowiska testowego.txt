@@ -1,2 +1,2 @@
 System: Windows 11
-Platforma: .NET 6.0
+Project interpreter: Python 3.8
