@@ -1,7 +1,7 @@
 print("hey, it's me - Python!")
 from deserialize_json import DeserializeJson
 newDeserializator = DeserializeJson('Assets/data.json')
-newDeserializator.somestats('dolnośląskie', 'GM')
+newDeserializator.wyswietlUrzadDlaWojewodztwa('dolnośląskie', 'GM')
 newDeserializator.zbudujWojewodztwa()
 newDeserializator.zbudujTypy()
 newDeserializator.Z233()
