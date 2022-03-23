@@ -1,12 +1,15 @@
 package com.lg;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "users", indexes = {
         @Index(name = "loginIndex", columnList = "login")
 })
 public class User {
+//    fields
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -18,18 +21,46 @@ public class User {
     private String lastName;
     @Enumerated(EnumType.STRING)
     private Sex.SexEnum sex;
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    private List<Role> roles = new ArrayList<>();
+    @ManyToMany
+    private List<UserGroup> userGroups = new ArrayList<>();
 
+//    constructors
     public User() {
     }
 
-    public User(Long id, String login, String password, String firstName, String lastName) {
+    public User(Long id, String login, String password, String firstName, String lastName, Sex.SexEnum sex) {
         this.id = id;
         this.login = login;
         this.password = password;
         this.firstName = firstName;
         this.lastName = lastName;
+        this.sex = sex;
     }
 
+    public User(Long id, String login, String password, String firstName, String lastName, Sex.SexEnum sex, ArrayList<Role> roles) {
+        this.id = id;
+        this.login = login;
+        this.password = password;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.sex = sex;
+        this.roles = roles;
+    }
+
+    public User(Long id, String login, String password, String firstName, String lastName, Sex.SexEnum sex, List<Role> roles, List<UserGroup> userGroups) {
+        this.id = id;
+        this.login = login;
+        this.password = password;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.sex = sex;
+        this.roles = roles;
+        this.userGroups = userGroups;
+    }
+
+    //    setters
     public void setId(Long id) {
         this.id = id;
     }
@@ -54,6 +85,15 @@ public class User {
         this.sex = sex;
     }
 
+    public void setRoles(List<Role> roles) {
+        this.roles = roles;
+    }
+
+    public void setUserGroups(List<UserGroup> userGroups) {
+        this.userGroups = userGroups;
+    }
+
+    //    getters
     public Long getId() {
         return id;
     }
@@ -78,6 +118,16 @@ public class User {
         return sex;
     }
 
+    public List<Role> getRoles() {
+        return roles;
+    }
+
+    public List<UserGroup> getUserGroups() {
+        return userGroups;
+    }
+
+    //    toString
+
     @Override
     public String toString() {
         return "User{" +
@@ -87,6 +137,8 @@ public class User {
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", sex=" + sex +
+                ", roles=" + roles +
+                ", userGroups=" + userGroups +
                 '}';
     }
 }
