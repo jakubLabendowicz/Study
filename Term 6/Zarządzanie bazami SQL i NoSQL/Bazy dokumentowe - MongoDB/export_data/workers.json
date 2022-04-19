@@ -1,0 +1,37 @@
+[{
+  "_id": {
+    "$oid": "6248a4105307713668a0fa7f"
+  },
+  "name": "Jan",
+  "surname": "Kowalski",
+  "email": "jk@gmail.com",
+  "place_of_employment": {
+    "type": "gas_station",
+    "id": "624888f1f4fb08e41ea6e3a3"
+  },
+  "job_position": "gas_station_worker"
+},{
+  "_id": {
+    "$oid": "6248a4105307713668a0fa80"
+  },
+  "name": "Adam",
+  "surname": "Nowak",
+  "email": "an@gmail.com",
+  "place_of_employment": {
+    "type": "warehouse",
+    "id": "6248896ef4fb08e41ea6e3a8"
+  },
+  "job_position": "driver"
+},{
+  "_id": {
+    "$oid": "6248a4105307713668a0fa81"
+  },
+  "name": "Michał",
+  "surname": "Małysz",
+  "email": "mm@gmail.com",
+  "place_of_employment": {
+    "type": "warehouse",
+    "id": "6248896ef4fb08e41ea6e3a8"
+  },
+  "job_position": "storekeeper"
+}]

@@ -1,0 +1,10 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = IS_Lab5_SoapUI
+build_property.ProjectDir = C:\Users\Uzytkownik\Documents\Study\Term 6\Integracja systemów\Lab 5\Kod źródłowy\IS_Lab5_SoapUI\IS_Lab5_SoapUI\IS_Lab5_SoapUI\

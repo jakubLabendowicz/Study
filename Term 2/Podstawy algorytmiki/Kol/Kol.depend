@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1592397837 source:c:\users\uzytkownik\documents\code blocks\kol\main.cpp
+	<iostream>
+	<string>
+	<fstream>
+	<cstdlib>
+

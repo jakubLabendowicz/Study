@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1590532253 source:c:\users\uzytkownik\documents\code blocks\laboratorium10\main.cpp
+	<iostream>
+	<fstream>
+

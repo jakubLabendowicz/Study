@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1589222946 source:c:\users\uzytkownik\documents\code blocks\laboratorium8\main.cpp
+	<iostream>
+	<string>
+	<fstream>
+	<math.h>
+	<locale.h>
+

@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1584990356 source:c:\users\uzytkownik\documents\code blocks\temat 3\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<cstdlib>
+

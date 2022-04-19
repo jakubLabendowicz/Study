@@ -1,0 +1,61 @@
+[{
+  "_id": {
+    "$oid": "6248abe75307713668a0fa9b"
+  },
+  "order_id": "6248a8f35307713668a0fa8c",
+  "order_status": "in_progress",
+  "drivers": [
+    {
+      "id": "6248a4105307713668a0fa80",
+      "name": "Adam",
+      "surname": "Nowak",
+      "email": "an@gmail.com"
+    }
+  ],
+  "storekeeper": {
+    "id": "6248a4105307713668a0fa81",
+    "name": "Michał",
+    "surname": "Małysz",
+    "email": "mm@gmail.com"
+  }
+},{
+  "_id": {
+    "$oid": "6248abe75307713668a0fa9c"
+  },
+  "order_id": "6248a8f35307713668a0fa8d",
+  "order_status": "closed",
+  "drivers": [
+    {
+      "id": "6248a4105307713668a0fa80",
+      "name": "Adam",
+      "surname": "Nowak",
+      "email": "an@gmail.com"
+    }
+  ],
+  "storekeeper": {
+    "id": "6248a4105307713668a0fa81",
+    "name": "Michał",
+    "surname": "Małysz",
+    "email": "mm@gmail.com"
+  }
+},{
+  "_id": {
+    "$oid": "6248abe75307713668a0fa9d"
+  },
+  "order_id": "6248a8f35307713668a0fa8e",
+  "order_status": "open",
+  "drivers": [
+    {
+      "id": "6248a4105307713668a0fa80",
+      "name": "Adam",
+      "surname": "Nowak",
+      "email": "an@gmail.com"
+    }
+  ],
+  "storekeeper": {
+    "id": "6248a4105307713668a0fa81",
+    "name": "Michał",
+    "surname": "Małysz",
+    "email": "mm@gmail.com"
+  }
+}]

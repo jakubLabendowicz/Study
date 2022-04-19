@@ -1,0 +1,145 @@
+[{
+  "_id": {
+    "$oid": "6248a8f35307713668a0fa8c"
+  },
+  "products": [
+    {
+      "name": "Super Diesel",
+      "type": "Diesel",
+      "stock": {
+        "$numberDecimal": "5000"
+      }
+    },
+    {
+      "name": "Diesel+",
+      "type": "Diesel",
+      "stock": {
+        "$numberDecimal": "4000"
+      }
+    }
+  ],
+  "origin": {
+    "id": "6248896ef4fb08e41ea6e3a8",
+    "address": {
+      "country": "Poland",
+      "region": "Mazowieckie",
+      "city": "Warsaw",
+      "street": "Marszałkowska",
+      "number": "51",
+      "zip_code": "00-123"
+    }
+  },
+  "target": {
+    "id": "624888f1f4fb08e41ea6e3a4",
+    "address": {
+      "country": "Poland",
+      "region": "Lubelskie",
+      "city": "Lublin",
+      "street": "Nadbystrzycka",
+      "number": "24",
+      "zip_code": "01-123"
+    }
+  },
+  "order_owner": {
+    "id": "6248a4105307713668a0fa7f",
+    "name": "Jan",
+    "surname": "Kowalski",
+    "email": "jk@gmail.com"
+  }
+},{
+  "_id": {
+    "$oid": "6248a8f35307713668a0fa8d"
+  },
+  "products": [
+    {
+      "name": "Super Diesel",
+      "type": "Diesel",
+      "stock": {
+        "$numberDecimal": "3000"
+      }
+    },
+    {
+      "name": "Diesel+",
+      "type": "Diesel",
+      "stock": {
+        "$numberDecimal": "6000"
+      }
+    }
+  ],
+  "origin": {
+    "id": "6248896ef4fb08e41ea6e3a8",
+    "address": {
+      "country": "Poland",
+      "region": "Mazowieckie",
+      "city": "Warsaw",
+      "street": "Marszałkowska",
+      "number": "51",
+      "zip_code": "00-123"
+    }
+  },
+  "target": {
+    "id": "624888f1f4fb08e41ea6e3a4",
+    "address": {
+      "country": "Poland",
+      "region": "Lubelskie",
+      "city": "Lublin",
+      "street": "Nadbystrzycka",
+      "number": "24",
+      "zip_code": "01-123"
+    }
+  },
+  "order_owner": {
+    "id": "6248a4105307713668a0fa7f",
+    "name": "Jan",
+    "surname": "Kowalski",
+    "email": "jk@gmail.com"
+  }
+},{
+  "_id": {
+    "$oid": "6248a8f35307713668a0fa8e"
+  },
+  "products": [
+    {
+      "name": "Super Diesel",
+      "type": "Diesel",
+      "stock": {
+        "$numberDecimal": "2000"
+      }
+    },
+    {
+      "name": "Diesel+",
+      "type": "Diesel",
+      "stock": {
+        "$numberDecimal": "6000"
+      }
+    }
+  ],
+  "origin": {
+    "id": "6248896ef4fb08e41ea6e3a8",
+    "address": {
+      "country": "Poland",
+      "region": "Mazowieckie",
+      "city": "Warsaw",
+      "street": "Marszałkowska",
+      "number": "51",
+      "zip_code": "00-123"
+    }
+  },
+  "target": {
+    "id": "624888f1f4fb08e41ea6e3a4",
+    "address": {
+      "country": "Poland",
+      "region": "Lubelskie",
+      "city": "Lublin",
+      "street": "Nadbystrzycka",
+      "number": "24",
+      "zip_code": "01-123"
+    }
+  },
+  "order_owner": {
+    "id": "6248a4105307713668a0fa7f",
+    "name": "Jan",
+    "surname": "Kowalski",
+    "email": "jk@gmail.com"
+  }
+}]

@@ -1,0 +1,108 @@
+[
+  {
+    "products": [
+      {
+        "name": "Super Diesel",
+        "type": "Diesel",
+        "stock": {
+          "$numberDecimal": "5000"
+        },
+        "price": {
+          "$numberDecimal": "6.70"
+        }
+      },
+      {
+        "name": "Diesel+",
+        "type": "Diesel",
+        "stock": {
+          "$numberDecimal": "4000"
+        },
+        "price": {
+          "$numberDecimal": "6.70"
+        }
+      }
+    ],
+    "address": {
+      "country": "Poland",
+      "region": "Mazowieckie",
+      "city": "Warsaw",
+      "street": "Marszałkowska",
+      "number": "51",
+      "zip_code": "00-123"
+    }
+  },
+  {
+    "products": [
+      {
+        "name": "Super 95",
+        "type": "95",
+        "stock": {
+          "$numberDecimal": "4000"
+        },
+        "price": {
+          "$numberDecimal": "5.70"
+        }
+      },
+      {
+        "name": "Diesel+",
+        "type": "Diesel",
+        "stock": {
+          "$numberDecimal": "6000"
+        },
+        "price": {
+          "$numberDecimal": "6.62"
+        }
+      }
+    ],
+    "address": {
+      "country": "Poland",
+      "region": "Lubelskie",
+      "city": "Lublin",
+      "street": "Nadbystrzycka",
+      "number": "24",
+      "zip_code": "01-123"
+    }
+  },
+  {
+    "products": [
+      {
+        "name": "Super Diesel",
+        "type": "Diesel",
+        "stock": {
+          "$numberDecimal": "3000"
+        },
+        "price": {
+          "$numberDecimal": "6.20"
+        }
+      },
+      {
+        "name": "Diesel+",
+        "type": "Diesel",
+        "stock": {
+          "$numberDecimal": "5600"
+        },
+        "price": {
+          "$numberDecimal": "7.70"
+        }
+      },
+      {
+        "name": "Super 95",
+        "type": "95",
+        "stock": {
+          "$numberDecimal": "3000"
+        },
+        "price": {
+          "$numberDecimal": "6.70"
+        }
+      },
+    ],
+    "address": {
+      "country": "Poland",
+      "region": "Wielkopolskie",
+      "city": "Poznań",
+      "street": "Warszawska",
+      "number": "34",
+      "zip_code": "24-123"
+    }
+  }
+]

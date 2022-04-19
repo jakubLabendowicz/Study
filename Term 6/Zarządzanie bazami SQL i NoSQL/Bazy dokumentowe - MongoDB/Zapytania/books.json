@@ -1,0 +1,48 @@
+[{
+  "_id": {
+    "$oid": "618671168999c07005010e8c"
+  },
+  "title": "My world",
+  "quantity": 10,
+  "desc": {
+    "publisher": "ZYX Company",
+    "pages": 150,
+    "year": 2019
+  },
+  "tags": [
+    "travelling",
+    "world",
+    "food"
+  ],
+  "votes": [
+    {
+      "user": "bookfun",
+      "rating": 10
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "618671168999c07005010e8d"
+  },
+  "title": "Computer of XXI",
+  "quantity": 100,
+  "desc": {
+    "publisher": "XYZ Company",
+    "pages": 350,
+    "year": 2021
+  },
+  "tags": [
+    "technology",
+    "computer"
+  ],
+  "votes": [
+    {
+      "user": "bookfun",
+      "rating": 7
+    },
+    {
+      "user": "bigbook",
+      "rating": 5
+    }
+  ]
+}]

@@ -1,0 +1,29 @@
+<component name="libraryTable">
+  <library name="com.sun.xml.ws:rt:2.3.3-b01" type="repository">
+    <properties maven-id="com.sun.xml.ws:rt:2.3.3-b01" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/sun/xml/ws/rt/2.3.3-b01/rt-2.3.3-b01.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/sun/xml/ws/policy/2.7.9/policy-2.7.9.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/sun/xml/bind/jaxb-impl/2.3.3-b02/jaxb-impl-2.3.3-b02.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/glassfish/ha/ha-api/3.1.12/ha-api-3.1.12.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/glassfish/external/management-api/3.2.2/management-api-3.2.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/glassfish/gmbal/gmbal/4.0.1/gmbal-4.0.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/glassfish/pfl/pfl-tf/4.1.0/pfl-tf-4.1.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/glassfish/pfl/pfl-basic/4.1.0/pfl-basic-4.1.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/jvnet/staxex/stax-ex/1.8.2/stax-ex-1.8.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/sun/xml/stream/buffer/streambuffer/1.5.8/streambuffer-1.5.8.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/jvnet/mimepull/mimepull/1.9.12/mimepull-1.9.12.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/sun/activation/jakarta.activation/1.2.1/jakarta.activation-1.2.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/sun/xml/messaging/saaj/saaj-impl/1.5.2-b01/saaj-impl-1.5.2-b01.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/woodstox/woodstox-core/5.1.0/woodstox-core-5.1.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/woodstox/stax2-api/4.1/stax2-api-4.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/jakarta/xml/ws/jakarta.xml.ws-api/2.3.2/jakarta.xml.ws-api-2.3.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/jakarta/xml/bind/jakarta.xml.bind-api/2.3.2/jakarta.xml.bind-api-2.3.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/jakarta/xml/soap/jakarta.xml.soap-api/1.4.1/jakarta.xml.soap-api-1.4.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/jakarta/jws/jakarta.jws-api/1.1.1/jakarta.jws-api-1.1.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/jakarta/annotation/jakarta.annotation-api/1.3.5/jakarta.annotation-api-1.3.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirstFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="729dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/button_first"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:text="Imię:"
+                android:translationX="-10dp"
+                tools:layout_constraintStart_toStartOf="parent"
+                tools:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="0dp"
+                android:ems="10"
+                android:hint="Wpisz imię"
+                android:inputType="textPersonName"
+                android:textSize="14sp"
+                android:translationX="10dp"
+                tools:layout_constraintEnd_toEndOf="parent"
+                tools:layout_constraintHorizontal_bias="1.0"
+                tools:layout_constraintStart_toEndOf="@+id/textView1"
+                tools:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:text="Nazwisko:"
+                android:translationX="-10dp"
+                tools:layout_constraintStart_toStartOf="parent"
+                tools:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="0dp"
+                android:ems="10"
+                android:hint="Wpisz nazwisko"
+                android:inputType="textPersonName"
+                android:textSize="14sp"
+                android:translationX="10dp"
+                tools:layout_constraintEnd_toEndOf="parent"
+                tools:layout_constraintHorizontal_bias="1.0"
+                tools:layout_constraintStart_toEndOf="@+id/textView2"
+                tools:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:text="Liczba ocen:"
+                android:translationX="-10dp"
+                tools:layout_constraintStart_toStartOf="parent"
+                tools:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName3"
+                android:layout_width="164dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="0dp"
+                android:ems="10"
+                android:hint="Wpisz liczbę ocen (5-15)"
+                android:inputType="number"
+                android:textSize="14sp"
+                android:translationX="10dp"
+                tools:layout_constraintEnd_toEndOf="parent"
+                tools:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="489dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button_first"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Oceny"
+                tools:layout_constraintBottom_toBottomOf="parent"
+                tools:layout_constraintEnd_toEndOf="parent"
+                tools:layout_constraintHorizontal_bias="0.498"
+                tools:layout_constraintStart_toStartOf="parent"
+                tools:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3"
+                tools:layout_constraintVertical_bias="0.062" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

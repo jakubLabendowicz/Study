@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1587414362 source:c:\users\uzytkownik\documents\code blocks\temat 5\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<cstdlib>
+
