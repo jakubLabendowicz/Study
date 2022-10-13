@@ -1,0 +1,17 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\IntegracjaSystemow8",
+    "\\IntegracjaSystemow8\\bin",
+    "\\IntegracjaSystemow8\\bin\\Debug",
+    "\\IntegracjaSystemow8\\bin\\Debug\\net5.0",
+    "\\IntegracjaSystemow8\\bin\\Release",
+    "\\IntegracjaSystemow8\\bin\\Release\\net5.0",
+    "\\IntegracjaSystemow8\\Controllers",
+    "\\IntegracjaSystemow8\\Entities",
+    "\\IntegracjaSystemow8\\Model",
+    "\\IntegracjaSystemow8\\obj"
+  ],
+  "SelectedNode": "\\IntegracjaSystemow8\\Controllers\\UsersController.cs",
+  "PreviewInSolutionExplorer": false
+}

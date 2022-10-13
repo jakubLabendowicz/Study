@@ -1,0 +1,30 @@
+{
+	"info": {
+		"_postman_id": "5e0cbe87-ce96-4af3-a890-03324dcc9ecd",
+		"name": "Cities",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Dane 10 miasta",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/IS_LAB6_REST/cities/read/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"IS_LAB6_REST",
+						"cities",
+						"read",
+						"10"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

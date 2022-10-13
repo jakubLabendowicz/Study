@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegracjaSystemow8", "IntegracjaSystemow8\IntegracjaSystemow8.csproj", "{0FC8034F-6EDF-4E5E-84CA-D6B73836EDDA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0FC8034F-6EDF-4E5E-84CA-D6B73836EDDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FC8034F-6EDF-4E5E-84CA-D6B73836EDDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FC8034F-6EDF-4E5E-84CA-D6B73836EDDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FC8034F-6EDF-4E5E-84CA-D6B73836EDDA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8C0D8310-4EE9-4FCC-A692-59A34F5802E8}
+	EndGlobalSection
+EndGlobal
