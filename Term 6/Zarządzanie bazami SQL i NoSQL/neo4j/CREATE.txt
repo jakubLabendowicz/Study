@@ -1,0 +1,60 @@
+:begin
+CREATE CONSTRAINT ON (node:`UNIQUE IMPORT LABEL`) ASSERT (node.`UNIQUE IMPORT ID`) IS UNIQUE;
+:commit
+CALL db.awaitIndexes(300);
+:begin
+UNWIND [{_id:0, properties:{number:"51", country:"Poland", city:"Warsaw", street:"Marszałkowska", region:"Mazowieckie", zip_code:"00-123"}}, {_id:1, properties:{number:"24", country:"Poland", city:"Lublin", street:"Nadbystrzycka", region:"Lubelskie", zip_code:"01-123"}}, {_id:2, properties:{number:"34", country:"Poland", city:"Poznań", street:"Warszawska", region:"Wielkopolskie", zip_code:"24-123"}}] AS row
+CREATE (n:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row._id}) SET n += row.properties SET n:GasStation;
+UNWIND [{_id:9, properties:{number:"51", country:"Poland", city:"Warsaw", street:"Marszałkowska", region:"Mazowieckie", zip_code:"00-123"}}, {_id:10, properties:{number:"24", country:"Poland", city:"Lublin", street:"Nadbystrzycka", region:"Lubelskie", zip_code:"01-123"}}, {_id:11, properties:{number:"34", country:"Poland", city:"Poznań", street:"Warszawska", region:"Wielkopolskie", zip_code:"24-123"}}] AS row
+CREATE (n:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row._id}) SET n += row.properties SET n:Warehouse;
+UNWIND [{_id:12, properties:{order_status:"in_progress"}}, {_id:13, properties:{order_status:"closed"}}, {_id:14, properties:{order_status:"open"}}] AS row
+CREATE (n:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row._id}) SET n += row.properties SET n:Order;
+UNWIND [{_id:3, properties:{name:"Super 95", type:"95"}}, {_id:4, properties:{name:"Diesel+", type:"Diesel"}}, {_id:6, properties:{name:"Super Diesel", type:"Diesel"}}] AS row
+CREATE (n:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row._id}) SET n += row.properties SET n:Product;
+UNWIND [{_id:5, properties:{surname:"Kowalski", name:"Jan", email:"jk@gmail.com"}}, {_id:7, properties:{surname:"Nowak", name:"Adam", email:"an@gmail.com"}}, {_id:8, properties:{surname:"Małysz", name:"Michał", email:"mm@gmail.com"}}] AS row
+CREATE (n:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row._id}) SET n += row.properties SET n:Worker;
+:commit
+:begin
+UNWIND [{start: {_id:0}, end: {_id:6}, properties:{price:6.7, stock:5000}}, {start: {_id:0}, end: {_id:4}, properties:{price:6.7, stock:4000}}, {start: {_id:1}, end: {_id:4}, properties:{price:6.62, stock:6000}}, {start: {_id:1}, end: {_id:3}, properties:{price:5.7, stock:4000}}, {start: {_id:2}, end: {_id:3}, properties:{price:6.7, stock:3000}}, {start: {_id:2}, end: {_id:4}, properties:{price:7.7, stock:5600}}, {start: {_id:2}, end: {_id:6}, properties:{price:6.2, stock:3000}}] AS row
+MATCH (start:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.start._id})
+MATCH (end:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.end._id})
+CREATE (start)-[r:SELLS]->(end) SET r += row.properties;
+UNWIND [{start: {_id:12}, end: {_id:7}, properties:{}}, {start: {_id:14}, end: {_id:7}, properties:{}}, {start: {_id:13}, end: {_id:7}, properties:{}}] AS row
+MATCH (start:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.start._id})
+MATCH (end:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.end._id})
+CREATE (start)-[r:TRANSPORTED_BY]->(end) SET r += row.properties;
+UNWIND [{start: {_id:12}, end: {_id:9}, properties:{}}, {start: {_id:13}, end: {_id:9}, properties:{}}, {start: {_id:14}, end: {_id:9}, properties:{}}] AS row
+MATCH (start:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.start._id})
+MATCH (end:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.end._id})
+CREATE (start)-[r:ORIGINS_FROM]->(end) SET r += row.properties;
+UNWIND [{start: {_id:5}, end: {_id:0}, properties:{job_position:"gas_station_worker"}}] AS row
+MATCH (start:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.start._id})
+MATCH (end:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.end._id})
+CREATE (start)-[r:WORKS_AT]->(end) SET r += row.properties;
+UNWIND [{start: {_id:13}, end: {_id:8}, properties:{}}, {start: {_id:14}, end: {_id:8}, properties:{}}, {start: {_id:12}, end: {_id:8}, properties:{}}] AS row
+MATCH (start:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.start._id})
+MATCH (end:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.end._id})
+CREATE (start)-[r:ISSUED_BY]->(end) SET r += row.properties;
+UNWIND [{start: {_id:14}, end: {_id:6}, properties:{stock:2000}}, {start: {_id:13}, end: {_id:6}, properties:{stock:3000}}, {start: {_id:13}, end: {_id:4}, properties:{stock:6000}}, {start: {_id:12}, end: {_id:4}, properties:{stock:4000}}, {start: {_id:12}, end: {_id:6}, properties:{stock:5000}}, {start: {_id:14}, end: {_id:4}, properties:{stock:6000}}] AS row
+MATCH (start:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.start._id})
+MATCH (end:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.end._id})
+CREATE (start)-[r:CONTAINS]->(end) SET r += row.properties;
+UNWIND [{start: {_id:14}, end: {_id:1}, properties:{}}, {start: {_id:13}, end: {_id:1}, properties:{}}, {start: {_id:12}, end: {_id:1}, properties:{}}] AS row
+MATCH (start:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.start._id})
+MATCH (end:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.end._id})
+CREATE (start)-[r:DESTINED_TO]->(end) SET r += row.properties;
+UNWIND [{start: {_id:7}, end: {_id:9}, properties:{job_position:"driver"}}, {start: {_id:8}, end: {_id:9}, properties:{job_position:"storekeeper"}}] AS row
+MATCH (start:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.start._id})
+MATCH (end:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.end._id})
+CREATE (start)-[r:WORKS_AT]->(end) SET r += row.properties;
+UNWIND [{start: {_id:12}, end: {_id:5}, properties:{}}, {start: {_id:14}, end: {_id:5}, properties:{}}, {start: {_id:13}, end: {_id:5}, properties:{}}] AS row
+MATCH (start:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.start._id})
+MATCH (end:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.end._id})
+CREATE (start)-[r:ORDERED_BY]->(end) SET r += row.properties;
+:commit
+:begin
+MATCH (n:`UNIQUE IMPORT LABEL`)  WITH n LIMIT 20000 REMOVE n:`UNIQUE IMPORT LABEL` REMOVE n.`UNIQUE IMPORT ID`;
+:commit
+:begin
+DROP CONSTRAINT ON (node:`UNIQUE IMPORT LABEL`) ASSERT (node.`UNIQUE IMPORT ID`) IS UNIQUE;
+:commit

@@ -1,0 +1,28 @@
+1
+db.hotels.find({price: {$gte: 100.0}})
+2
+db.hotels.find({guests_included: 1, extra_people: 0})
+3
+db.hotels.find({amenities: 'BBQ grill'})
+4
+5
+db.coll.aggregate([
+  {$match: {status: "A"}},
+  {$group: {_id: "$cust_id", total: {$sum: "$amount"}}},
+  {$sort: {total: -1}}
+])
+6
+db.coll.aggregate([
+  {$match: {status: "A"}},
+  {$group: {_id: "$cust_id", total: {$sum: "$amount"}}},
+  {$sort: {total: -1}}
+])
+7
+db.coll.aggregate([
+  {$match: {status: "A"}},
+  {$group: {_id: "$cust_id", total: {$sum: "$amount"}}},
+  {$sort: {total: -1}}
+])
+8
+9
+10
