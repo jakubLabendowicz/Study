@@ -1,0 +1,14 @@
+.
+├── docker-compose.yml
+├── A
+│   └── dockerfile
+├── L
+│   └── dockerfile
+├── M
+│   └── dockerfile
+├── P
+│   └── dockerfile
+├── README.md
+└── tree.txt
+
+4 directories, 7 files
