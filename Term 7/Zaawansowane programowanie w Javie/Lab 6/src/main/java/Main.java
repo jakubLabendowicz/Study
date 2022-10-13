@@ -1,5 +1,3 @@
-package classes;
-
 import java.util.Scanner;
 
 public class Main {
@@ -11,6 +9,6 @@ public class Main {
         String lastName = in.nextLine();
         Student1 student1 = new Student1();
         student1.setFirstName(firstName);
-        student1.setLastName(firstName);
+        student1.setLastName(lastName);
     }
 }
