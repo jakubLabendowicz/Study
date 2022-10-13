@@ -1,0 +1,10 @@
+﻿@page
+@model Lab4___Razor_Pages.Pages.UploadModel
+@{
+    
+}
+<form asp-page="Upload" method="post" enctype="multipart/form-data">
+    <input class="form-control" asp-for="UploadedFile" type="file"
+           accept=".jpg, .png, .jpeg, .gif, .bmp, .tif, .tiff|image/*" />
+    <input class="form-control" type="submit" value="Upload" />
+</form>
