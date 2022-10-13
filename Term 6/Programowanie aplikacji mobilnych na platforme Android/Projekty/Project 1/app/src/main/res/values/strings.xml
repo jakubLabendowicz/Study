@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">Projekt1</string>
+    <string name="textview">TextView</string>
+    <string name="imie">Imię:</string>
+    <string name="wpisz_imie">Wpisz imię:</string>
+    <string name="nazwisko">Nazwisko:</string>
+    <string name="wpisz_nazwisko">Wpisz nazwisko:</string>
+    <string name="liczba_ocen">Liczba ocen:</string>
+    <string name="wpisz_liczb_ocen_5_15">Wpisz liczbę ocen (5-15)</string>
+    <string name="exit">Wyjdź z aplikacji</string>
+
+    <string name="oceny">Oceny</string>
+    <string name="druga_strona">Uzupełnij oceny </string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="_4">4</string>
+    <string name="_5">5</string>
+    <string name="oblicz_srednia">Oblicz średnią:</string>
+    <string name="brak_imienia">Nie wpisałeś imienia!</string>
+    <string name="brak_imienia_error">Nie wpisałeś imienia!</string>
+    <string name="brak_nazwiska">Nie wpisałeś nazwiska!</string>
+    <string name="brak_nazwiska_error">Nie wpisałeś nazwiska!</string>
+    <string name="brak_ocen">Liczba ocen jest niepoprawna!</string>
+    <string name="brak_ocen_error">Nie wpisałeś liczby ocen!</string>
+
+
+    <string-array name="przedmioty">
+        <item>Fiz</item>
+        <item>Mat</item>
+        <item>W-F</item>
+        <item>Ang</item>
+        <item>Jap</item>
+        <item>Nie</item>
+        <item>Bio</item>
+        <item>Inf</item>
+        <item>Pol</item>
+        <item>Eko</item>
+        <item>Muz</item>
+        <item>Pla</item>
+        <item>Ele</item>
+        <item>Tel</item>
+        <item>Kor</item>
+    </string-array>
+</resources>

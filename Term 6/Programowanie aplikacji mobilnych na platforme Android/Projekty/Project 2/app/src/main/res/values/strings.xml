@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Project2</string>
+    <string name="usun_baze">Usuń bazę</string>
+    <string name="textview">TextView</string>
+    <string name="producerLabel">Producent</string>
+    <string name="modelLabel">Model</string>
+    <string name="versionLabel">Wersja androida</string>
+    <string name="urlLabel">Strona internetowa</string>
+    <string name="page">Strona</string>
+    <string name="cancel">Anuluj</string>
+    <string name="save">Zapisz</string>
+    <string name="contentDesxcription"> </string>
+    <string name="producerErrorEmpty">Nie wpisaleś producenta!</string>
+    <string name="modelErrorEmpty">Nie wpisaleś nazwy modelu telefonu!</string>
+    <string name="versionErrorEmpty">Nie wpisaleś wersji androida!</string>
+    <string name="urlEmptyError">Nie wpisaleś strony internetowej!</string>
+    <string name="urlErrorWrongAddress">Zły adres</string>
+</resources>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Projekt3</string>
+    <string name="adres">Adres: </string>
+    <string name="strona_internetowa">https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.4.36.tar.xz</string>
+    <string name="pobierz_informacje">Pobierz informacje</string>
+    <string name="pobierz_plik">Pobierz plik</string>
+    <string name="rozmiar_pliku">Rozmiar pliku:</string>
+    <string name="_0">0</string>
+    <string name="typ_pliku">Typ pliku:</string>
+    <string name="pobrano_bajt_w">Pobrano bajtów:</string>
+    <string name="powiadomienie_tytul">Uruchomiono pobieranie pliku</string>
+</resources>
