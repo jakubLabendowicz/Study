@@ -1,7 +1,6 @@
 # Study
 
-## Term 1
-[Link](https://github.com/jakubLabendowicz/Study/tree/main/Term%201)
+## [Term 1](https://github.com/jakubLabendowicz/Study/tree/main/Term%201)
 
 ## Term 2
 [Link](https://github.com/jakubLabendowicz/Study/tree/main/Term%202)
